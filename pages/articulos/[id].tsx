@@ -4,6 +4,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { Articulo, getById, ids } from '../../lib/articulos';
+import Carrousel from '../../components/Carrousel';
 
 interface DetalleArticuloProps {
   articulo: Articulo;
@@ -26,7 +27,7 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
         <Typography variant="h4" component="h1" gutterBottom>
           {articulo.titulo}
         </Typography>
-        <img src={articulo.foto1} width="300px"></img>
+        <Carrousel images={[articulo.foto1, articulo.foto2, articulo.foto3]} />
         <div
           dangerouslySetInnerHTML={{
             __html: articulo.descripcion,
@@ -48,7 +49,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<DetalleArticuloProps> = async ({
   params,
 }) => {
-  const articulo = await getById(params.id as string);
+  const articulo = await getById(params?.id as string);
   return {
     props: {
       articulo,
