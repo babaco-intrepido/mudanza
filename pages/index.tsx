@@ -6,6 +6,8 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import Chip from '@mui/material/Chip';
+import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
@@ -14,9 +16,18 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { NextPage } from 'next';
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+export type Categoria = string;
+export interface Articulo {
+  titulo: string;
+  cantidad: number;
+  descripcion: string;
+  categorias: Categoria[];
+}
+export interface IndexProps {
+  articulos: Articulo[];
+}
 
-const Index: NextPage = () => {
+const Index: NextPage<IndexProps> = ({ articulos }) => {
   return (
     <>
       <AppBar position="relative">
@@ -70,8 +81,8 @@ const Index: NextPage = () => {
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
+            {articulos.map((articulo, index) => (
+              <Grid item key={index} xs={12} sm={6} md={4}>
                 <Card
                   sx={{
                     height: '100%',
@@ -89,17 +100,22 @@ const Index: NextPage = () => {
                     alt="random"
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Heading
-                    </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe
-                      the content.
-                    </Typography>
+                    <Box sx={{ mb: 1 }}>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        {articulo.titulo}
+                      </Typography>
+                      <Typography>{articulo.descripcion}</Typography>
+                    </Box>
+                    <Box sx={{ mt: 1 }}>
+                      <Stack direction="row" spacing={1}>
+                        {articulo.categorias.map((it, index) => (
+                          <Chip key={index} label={it} color="secondary" />
+                        ))}
+                      </Stack>
+                    </Box>
                   </CardContent>
                   <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
+                    <Button size="small">Ver</Button>
                   </CardActions>
                 </Card>
               </Grid>
@@ -125,5 +141,28 @@ const Index: NextPage = () => {
     </>
   );
 };
+
+export async function getStaticProps() {
+  return {
+    props: {
+      articulos: [
+        {
+          titulo: 'Ensaladera de gres',
+          cantidad: 1,
+          descripcion:
+            'Diámetro 30cm, alto 15cm. Producto de La Materia Encendida.',
+          categorias: ['Vajilla'],
+        },
+        {
+          titulo: 'Cuencos de barro',
+          cantidad: 6,
+          descripcion:
+            'Vasijas de barro traidas de Bolivia. Diámetro 15cm. Se pueden meter al horno.',
+          categorias: ['Vajilla'],
+        },
+      ],
+    },
+  };
+}
 
 export default Index;
