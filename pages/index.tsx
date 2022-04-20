@@ -10,15 +10,9 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { NextPage } from 'next';
+import { GetStaticProps, NextPage } from 'next';
+import all, { Articulo } from './services/articulos';
 
-export type Categoria = string;
-export interface Articulo {
-  titulo: string;
-  cantidad: number;
-  descripcion: string;
-  categorias: Categoria[];
-}
 export interface IndexProps {
   articulos: Articulo[];
 }
@@ -95,11 +89,7 @@ const Index: NextPage<IndexProps> = ({ articulos }) => {
                       <Typography>{articulo.descripcion}</Typography>
                     </Box>
                     <Box sx={{ mt: 1 }}>
-                      <Stack direction="row" spacing={1}>
-                        {articulo.categorias.map((it, index) => (
-                          <Chip key={index} label={it} color="secondary" />
-                        ))}
-                      </Stack>
+                      <Chip label={articulo.categoria} color="secondary" />
                     </Box>
                   </CardContent>
                   <CardActions>
@@ -130,27 +120,13 @@ const Index: NextPage<IndexProps> = ({ articulos }) => {
   );
 };
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps<IndexProps> = async () => {
+  const articulos = await all();
   return {
     props: {
-      articulos: [
-        {
-          titulo: 'Ensaladera de gres',
-          cantidad: 1,
-          descripcion:
-            'Diámetro 30cm, alto 15cm. Producto de La Materia Encendida.',
-          categorias: ['Vajilla'],
-        },
-        {
-          titulo: 'Cuencos de barro',
-          cantidad: 6,
-          descripcion:
-            'Vasijas de barro traidas de Bolivia. Diámetro 15cm. Se pueden meter al horno.',
-          categorias: ['Vajilla'],
-        },
-      ],
+      articulos,
     },
   };
-}
+};
 
 export default Index;
