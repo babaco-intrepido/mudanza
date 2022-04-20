@@ -8,13 +8,14 @@ const netlifyCmsConfig: CmsConfig = {
     repo: 'babaco-intrepido/mudanza',
     branch: 'main',
   },
-  media_folder: 'public/img',
   media_library: {
     name: 'cloudinary',
     config: {
       cloud_name: 'faloi',
       api_key: '518333241246549',
     },
+    // @ts-ignore
+    output_filename_only: true,
   },
   collections: [
     {
