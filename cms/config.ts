@@ -1,6 +1,6 @@
-import { NetlifyCmsConfig } from './types';
+import { CmsConfig } from 'netlify-cms-core';
 
-const config: NetlifyCmsConfig = {
+const config: CmsConfig = {
   cms_manual_init: true,
   backend: {
     name: 'github',
@@ -8,12 +8,19 @@ const config: NetlifyCmsConfig = {
     branch: 'main',
   },
   media_folder: 'public/img',
-  public_folder: 'img',
+  media_library: {
+    name: 'cloudinary',
+    config: {
+      cloud_name: 'faloi',
+      api_key: '518333241246549',
+    },
+  },
   collections: [
     {
       name: 'articulos',
       label: 'Artículos',
       folder: 'content/articulos',
+      identifier_field: 'titulo',
       create: true,
       fields: [
         {
@@ -35,6 +42,23 @@ const config: NetlifyCmsConfig = {
           label: 'Categorías',
           name: 'categorias',
           widget: 'list',
+        },
+        {
+          label: 'Foto principal',
+          name: 'foto1',
+          widget: 'image',
+        },
+        {
+          label: 'Foto adicional 1',
+          name: 'foto2',
+          widget: 'image',
+          required: false,
+        },
+        {
+          label: 'Foto adicional 2',
+          name: 'foto3',
+          widget: 'image',
+          required: false,
         },
       ],
     },
