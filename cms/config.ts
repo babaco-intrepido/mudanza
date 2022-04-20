@@ -39,9 +39,9 @@ const config: CmsConfig = {
           widget: 'number',
         },
         {
-          label: 'Categorías',
-          name: 'categorias',
-          widget: 'list',
+          label: 'Categoría',
+          name: 'categoria',
+          widget: 'string',
         },
         {
           label: 'Foto principal',
