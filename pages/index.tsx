@@ -13,12 +13,14 @@ import Container from '@mui/material/Container';
 import { GetStaticProps, NextPage } from 'next';
 import { all, Articulo } from '../lib/articulos';
 import Link from '../components/Link';
+import { imagenConResolucion } from '../lib/imagen';
 
 export interface IndexProps {
   articulos: Articulo[];
+  cloudName: string;
 }
 
-const Index: NextPage<IndexProps> = ({ articulos }) => {
+const Index: NextPage<IndexProps> = ({ articulos, cloudName }) => {
   return (
     <>
       <main>
@@ -75,7 +77,7 @@ const Index: NextPage<IndexProps> = ({ articulos }) => {
                 >
                   <CardMedia
                     component="img"
-                    image={articulo.foto1}
+                    image={imagenConResolucion(articulo.foto1, { height: 500 })}
                     alt="random"
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
@@ -132,6 +134,7 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
   return {
     props: {
       articulos,
+      cloudName: 'faloi',
     },
   };
 };
