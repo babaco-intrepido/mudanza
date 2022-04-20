@@ -82,7 +82,11 @@ const Index: NextPage<IndexProps> = ({ articulos }) => {
                       <Typography gutterBottom variant="h5" component="h2">
                         {articulo.titulo}
                       </Typography>
-                      <Typography>{articulo.descripcion}</Typography>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: articulo.descripcion,
+                        }}
+                      ></div>
                     </Box>
                     <Box sx={{ mt: 1 }}>
                       <Chip label={articulo.categoria} color="secondary" />

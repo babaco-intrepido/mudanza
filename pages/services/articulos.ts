@@ -26,10 +26,10 @@ export async function fetchArticulos(): Promise<Articulo[]> {
         const matterResult = matter(fileContents);
         const matterData = matterResult.data as Articulo;
 
-        // const content = await remark()
-        //   .use(html)
-        //   .process(matterData.descripcion);
-        // matterData.descripcion = content.toString();
+        const content = await remark()
+          .use(html)
+          .process(matterData.descripcion);
+        matterData.descripcion = content.toString();
 
         return matterData;
       })
