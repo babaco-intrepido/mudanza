@@ -3,12 +3,13 @@ import matter from 'gray-matter';
 import path from 'path';
 import { remark } from 'remark';
 import html from 'remark-html';
+import { find, whereEq, map, prop } from 'ramda';
 
 const articulosDirectory = path.join(process.cwd(), 'content/articulos');
 
 let articulosCache: Articulo[];
 
-export async function fetchArticulos(): Promise<Articulo[]> {
+async function fetchArticulos(): Promise<Articulo[]> {
   if (articulosCache) {
     return articulosCache;
   }
@@ -26,6 +27,8 @@ export async function fetchArticulos(): Promise<Articulo[]> {
         const matterResult = matter(fileContents);
         const matterData = matterResult.data as Articulo;
 
+        matterData.id = fileName.replace(/\.md$/, '');
+
         const content = await remark()
           .use(html)
           .process(matterData.descripcion);
@@ -40,6 +43,7 @@ export async function fetchArticulos(): Promise<Articulo[]> {
 }
 
 export interface Articulo {
+  id: string;
   titulo: string;
   cantidad: number;
   descripcion: string;
@@ -49,6 +53,14 @@ export interface Articulo {
   foto3: string;
 }
 
-export default async function all(): Promise<Articulo[]> {
+export async function all(): Promise<Articulo[]> {
   return fetchArticulos();
+}
+
+export async function ids(): Promise<string[]> {
+  return fetchArticulos().then(map(prop('id')));
+}
+
+export async function getById(id: string): Promise<Articulo> {
+  return fetchArticulos().then(find(whereEq({ id }))) as Promise<Articulo>;
 }

@@ -11,7 +11,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { GetStaticProps, NextPage } from 'next';
-import all, { Articulo } from '../lib/articulos';
+import { all, Articulo } from '../lib/articulos';
+import Link from '../components/Link';
 
 export interface IndexProps {
   articulos: Articulo[];
@@ -93,7 +94,13 @@ const Index: NextPage<IndexProps> = ({ articulos }) => {
                     </Box>
                   </CardContent>
                   <CardActions>
-                    <Button size="small">Ver</Button>
+                    <Button
+                      component={Link}
+                      size="small"
+                      href={`/articulos/${articulo.id}`}
+                    >
+                      Ver
+                    </Button>
                   </CardActions>
                 </Card>
               </Grid>
