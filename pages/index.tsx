@@ -32,7 +32,7 @@ const Index: NextPage<IndexProps> = ({ articulos }) => {
               color="text.primary"
               gutterBottom
             >
-              Album layout
+              ¡Nos vamos de viaje!
             </Typography>
             <Typography
               variant="h5"
@@ -40,9 +40,7 @@ const Index: NextPage<IndexProps> = ({ articulos }) => {
               color="text.secondary"
               paragraph
             >
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don&apos;t simply skip over it entirely.
+              Y vendemos todo lo que nos quedó.
             </Typography>
             <Stack
               sx={{ pt: 4 }}
