@@ -11,7 +11,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { GetStaticProps, NextPage } from 'next';
-import all, { Articulo } from './services/articulos';
+import all, { Articulo } from '../lib/articulos';
 
 export interface IndexProps {
   articulos: Articulo[];

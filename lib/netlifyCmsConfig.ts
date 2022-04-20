@@ -1,6 +1,7 @@
 import { CmsConfig } from 'netlify-cms-core';
 
-const config: CmsConfig = {
+const netlifyCmsConfig: CmsConfig = {
+  // @ts-ignore
   cms_manual_init: true,
   backend: {
     name: 'github',
@@ -65,4 +66,4 @@ const config: CmsConfig = {
   ],
 };
 
-export default config;
+export default netlifyCmsConfig;

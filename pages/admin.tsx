@@ -1,13 +1,15 @@
 import dynamic from 'next/dynamic';
-import config from '../cms/config';
+import netlifyCmsConfig from '../lib/netlifyCmsConfig';
 
 const CMS = dynamic(
+  // @ts-ignore
   async () => {
     const cms = (await import('netlify-cms-app')).default;
+    // @ts-ignore
     const cloudinary = (await import('netlify-cms-media-library-cloudinary'))
       .default;
     cms.registerMediaLibrary(cloudinary);
-    cms.init({ config });
+    cms.init({ config: netlifyCmsConfig });
   },
   { ssr: false, loading: () => <p>Cargando...</p> }
 );
