@@ -11,8 +11,8 @@ export interface FichaArticuloProps {
   articulo: Articulo;
 }
 
-const RectangularChip = styled(Chip)<ChipProps>((props) => ({
-  borderRadius: 0,
+const RectangularChip = styled(Chip)<ChipProps>(() => ({
+  borderRadius: 5,
 }));
 
 export default function FichaArticulo({ articulo }: FichaArticuloProps) {
@@ -33,14 +33,16 @@ export default function FichaArticulo({ articulo }: FichaArticuloProps) {
               {articulo.titulo}
             </Typography>
             <Typography gutterBottom variant="subtitle1">
-              $ 1.500
+              $ {articulo.precio.toLocaleString('es-AR')}
             </Typography>
-            <RectangularChip
-              label="Disponible a partir de Junio"
-              variant="outlined"
-              color="warning"
-              size="small"
-            />
+            {articulo.entrega && (
+              <RectangularChip
+                label={`Disponible a partir de ${articulo.entrega}`}
+                variant="outlined"
+                color="warning"
+                size="small"
+              />
+            )}
           </CardContent>
         </Grid>
       </Card>

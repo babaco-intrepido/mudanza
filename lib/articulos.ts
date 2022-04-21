@@ -13,6 +13,12 @@ async function hydrate(articulo: Articulo, fileName: string) {
   const content = await remark().use(html).process(articulo.descripcion);
   articulo.descripcion = content.toString();
 
+  // TODO: completar con datos reales
+  articulo.precio = Math.round(Math.random() * 15000);
+  if (Math.random() > 0.5) {
+    articulo.entrega = 'Junio';
+  }
+
   return articulo;
 }
 
@@ -53,6 +59,8 @@ export interface Articulo {
   cantidad: number;
   descripcion: string;
   categoria: string;
+  precio: number;
+  entrega?: string;
   foto1: string;
   foto2: string;
   foto3: string;
