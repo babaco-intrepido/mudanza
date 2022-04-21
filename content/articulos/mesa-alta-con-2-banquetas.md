@@ -7,5 +7,5 @@ descripcion: |-
 cantidad: 1
 categoria: Muebles
 foto1: "/images/mesada1.jpg"
-foto2: ''
-foto3: ''
+foto2: 
+foto3: 

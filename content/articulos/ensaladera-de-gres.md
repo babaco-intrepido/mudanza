@@ -5,4 +5,4 @@ cantidad: 1
 categoria: Vajilla
 foto1: "/images/ensaladera1.jpg"
 foto2: "/images/ensaladera2.jpg"
-foto3: ''
+foto3: 

@@ -5,13 +5,13 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { Articulo, getById, ids } from '../../lib/articulos';
 import Carrousel from '../../components/Carrousel';
-import { reject, isEmpty, concat } from 'ramda';
+import { reject, concat, isNil } from 'ramda';
 
 interface DetalleArticuloProps {
   articulo: Articulo;
 }
 
-const nonEmpty = reject(isEmpty);
+const nonNil = reject(isNil);
 
 const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
   articulo,
@@ -33,7 +33,7 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
         <Carrousel
           images={concat(
             [articulo.foto1],
-            nonEmpty([articulo.foto2, articulo.foto3])
+            nonNil([articulo.foto2, articulo.foto3])
           )}
         />
         <div

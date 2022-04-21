@@ -7,6 +7,6 @@ descripcion: |-
   - Cable 1,85m
 cantidad: 1
 categoria: Herramientas
-foto1: ''
-foto2: ''
-foto3: ''
+foto1: 
+foto2: 
+foto3: 

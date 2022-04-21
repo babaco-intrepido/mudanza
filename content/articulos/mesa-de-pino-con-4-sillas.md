@@ -5,4 +5,4 @@ cantidad: 1
 categoria: Muebles
 foto1: "/images/mesa1.jpg"
 foto2: "/images/mesa2.jpg"
-foto3: ''
+foto3: 

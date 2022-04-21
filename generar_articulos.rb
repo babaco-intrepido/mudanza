@@ -13,7 +13,7 @@ end
 
 def nombre_foto(item, numero)
   valor = "#{item['Codigo foto']}#{numero}.jpg"
-  File.exist?("#{IMAGES_DIR}/#{valor}") ? "/images/#{valor}" : ''
+  File.exist?("#{IMAGES_DIR}/#{valor}") ? "/images/#{valor}" : nil
 end
 
 def to_articulo(item)

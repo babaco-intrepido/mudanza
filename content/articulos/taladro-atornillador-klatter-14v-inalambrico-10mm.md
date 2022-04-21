@@ -7,6 +7,6 @@ descripcion: |-
   - Viene con su caja-maletín y algunas mechas (ver foto).
 cantidad: 1
 categoria: Herramientas
-foto1: ''
-foto2: ''
-foto3: ''
+foto1: 
+foto2: 
+foto3: 

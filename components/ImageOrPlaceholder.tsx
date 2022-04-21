@@ -1,5 +1,5 @@
 import Image, { ImageProps } from 'next/image';
-import { always, isEmpty, when } from 'ramda';
+import { always, isNil, when } from 'ramda';
 
 const placeholder = '/images/placeholder.png';
 
@@ -8,7 +8,8 @@ export default function ImageOrPlaceholder({
   alt = 'Foto',
   ...props
 }: ImageProps) {
+  console.log({ src: when(isNil, always(placeholder), src) });
   return (
-    <Image src={when(isEmpty, always(placeholder), src)} alt={alt} {...props} />
+    <Image src={when(isNil, always(placeholder), src)} alt={alt} {...props} />
   );
 }

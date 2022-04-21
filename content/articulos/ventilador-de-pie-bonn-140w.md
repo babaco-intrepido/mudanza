@@ -6,4 +6,4 @@ cantidad: 1
 categoria: Electrodomésticos
 foto1: "/images/bonn1.jpg"
 foto2: "/images/bonn2.jpg"
-foto3: ''
+foto3: 

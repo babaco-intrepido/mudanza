@@ -6,6 +6,6 @@ descripcion: |-
   - Incluye discos de corte (ver foto).
 cantidad: 1
 categoria: Herramientas
-foto1: ''
-foto2: ''
-foto3: ''
+foto1: 
+foto2: 
+foto3: 

@@ -5,4 +5,4 @@ cantidad: 4
 categoria: Vajilla
 foto1: "/images/azulhondo1.jpg"
 foto2: "/images/azulhondo2.jpg"
-foto3: ''
+foto3: 

@@ -6,4 +6,4 @@ cantidad: 6
 categoria: Vajilla
 foto1: "/images/barro1.jpg"
 foto2: "/images/barro2.jpg"
-foto3: ''
+foto3: 

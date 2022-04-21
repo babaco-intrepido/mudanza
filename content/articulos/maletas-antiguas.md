@@ -3,6 +3,6 @@ titulo: Maletas antiguas
 descripcion: 
 cantidad: 4
 categoria: 
-foto1: ''
-foto2: ''
-foto3: ''
+foto1: 
+foto2: 
+foto3: 
