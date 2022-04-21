@@ -1,8 +1,9 @@
 ---
+
 titulo: Chromecast
-descripcion: 
+descripcion:
 cantidad: 1
 categoria: Electrodomésticos
 foto1: ''
-foto2: IMG_20220420_112205_bmbg1q
+foto2: /IMG_20220420_112205_bmbg1q
 foto3: ''

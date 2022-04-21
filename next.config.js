@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
+const cloudinaryBaseUrl = `https://res.cloudinary.com/faloi/image/upload/`;
+
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['res.cloudinary.com'],
+    loader: 'cloudinary',
+    path: cloudinaryBaseUrl,
   },
 };
 

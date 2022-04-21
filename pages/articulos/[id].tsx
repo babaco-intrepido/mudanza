@@ -5,21 +5,17 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { Articulo, getById, ids } from '../../lib/articulos';
 import Carrousel from '../../components/Carrousel';
-import { imagenConResolucion } from '../../lib/imagen';
-import { reject, compose, map, isEmpty } from 'ramda';
+import { reject, compose, isEmpty } from 'ramda';
 
 interface DetalleArticuloProps {
   articulo: Articulo;
 }
 
+const nonEmpty = reject(isEmpty);
+
 const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
   articulo,
 }: DetalleArticuloProps) => {
-  const obtenerImagenes = compose(
-    map((it: string) => imagenConResolucion(it, { height: 1024 })),
-    reject(isEmpty)
-  );
-
   return (
     <Container maxWidth="lg">
       <Box
@@ -35,11 +31,7 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
           {articulo.titulo}
         </Typography>
         <Carrousel
-          images={obtenerImagenes([
-            articulo.foto1,
-            articulo.foto2,
-            articulo.foto3,
-          ])}
+          images={nonEmpty([articulo.foto1, articulo.foto2, articulo.foto3])}
         />
         <div
           dangerouslySetInnerHTML={{

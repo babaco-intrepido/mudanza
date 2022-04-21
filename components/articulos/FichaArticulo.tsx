@@ -1,14 +1,11 @@
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Chip from '@mui/material/Chip';
 import Link from '../Link';
 import Typography from '@mui/material/Typography';
-import { imagenConResolucion } from '../../lib/imagen';
 import { Articulo } from '../../lib/articulos';
+import Image from 'next/image';
 
 export interface FichaArticuloProps {
   articulo: Articulo;
@@ -18,12 +15,7 @@ export default function FichaArticulo({ articulo }: FichaArticuloProps) {
   return (
     <Link href={`/articulos/${articulo.id}`} underline="none">
       <Card sx={{ display: 'flex' }}>
-        <CardMedia
-          component="img"
-          image={imagenConResolucion(articulo.foto1, { width: 150 })}
-          alt="Foto"
-          sx={{ width: 150 }}
-        />
+        <Image src={articulo.foto1} alt="Foto" width={150} height={150} />
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
           <CardContent>
             <Box sx={{ mb: 1 }}>

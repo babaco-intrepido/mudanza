@@ -1247,13 +1247,6 @@ clean-stack@^4.1.0:
   dependencies:
     escape-string-regexp "5.0.0"
 
-cloudinary-build-url@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/cloudinary-build-url/-/cloudinary-build-url-0.2.4.tgz#465889847cbd846ac36baafcb90e3b6d93e51ee2"
-  integrity sha512-Wi0aZPHOa90xDCCC4k9eoTVPIm3aWNyycO+rJUXvOyusQqmkPSprHSuJh3s2zNxEtuGj24aCM13iLDpilWMpSw==
-  dependencies:
-    "@cld-apis/utils" "^0.2.0"
-
 clsx@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/clsx/-/clsx-1.1.1.tgz"

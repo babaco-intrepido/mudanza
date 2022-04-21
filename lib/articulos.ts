@@ -3,9 +3,35 @@ import matter from 'gray-matter';
 import path from 'path';
 import { remark } from 'remark';
 import html from 'remark-html';
-import { find, whereEq, map, prop, compose, uniq } from 'ramda';
+import {
+  find,
+  whereEq,
+  map,
+  prop,
+  compose,
+  uniq,
+  evolve,
+  when,
+  isEmpty,
+  always,
+} from 'ramda';
 
+const placeholder = '/placeholder_oz5mpd.png';
 const articulosDirectory = path.join(process.cwd(), 'content/articulos');
+
+async function hydrate(data: Partial<Articulo>, fileName: string) {
+  const articulo = evolve(
+    { foto1: when(isEmpty, always(placeholder)) },
+    data
+  ) as Articulo;
+
+  articulo.id = fileName.replace(/\.md$/, '');
+
+  const content = await remark().use(html).process(articulo.descripcion);
+  articulo.descripcion = content.toString();
+
+  return articulo;
+}
 
 let articulosCache: Articulo[];
 
@@ -25,16 +51,8 @@ async function fetchArticulos(): Promise<Articulo[]> {
 
         // Use gray-matter to parse the post metadata section
         const matterResult = matter(fileContents);
-        const matterData = matterResult.data as Articulo;
 
-        matterData.id = fileName.replace(/\.md$/, '');
-
-        const content = await remark()
-          .use(html)
-          .process(matterData.descripcion);
-        matterData.descripcion = content.toString();
-
-        return matterData;
+        return hydrate(matterResult.data, fileName);
       })
   );
 
