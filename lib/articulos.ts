@@ -3,7 +3,7 @@ import matter from 'gray-matter';
 import path from 'path';
 import { remark } from 'remark';
 import html from 'remark-html';
-import { find, whereEq, map, prop, compose, uniq } from 'ramda';
+import { find, whereEq, map, prop, compose, uniq, isNil } from 'ramda';
 
 const articulosDirectory = path.join(process.cwd(), 'content/articulos');
 
@@ -18,13 +18,17 @@ async function hydrate(articulo: Articulo, fileName: string) {
 
 let articulosCache: Articulo[];
 
+function estaCompleto(articulo: Articulo) {
+  return !isNil(articulo.categoria);
+}
+
 async function fetchArticulos(): Promise<Articulo[]> {
   if (articulosCache) {
     return articulosCache;
   }
-  // Get file names under /posts
+
   const fileNames = fs.readdirSync(articulosDirectory);
-  const allPostsData = await Promise.all(
+  const articulos = await Promise.all(
     fileNames
       .filter((it) => it.endsWith('.md'))
       .map(async (fileName) => {
@@ -39,7 +43,7 @@ async function fetchArticulos(): Promise<Articulo[]> {
       })
   );
 
-  articulosCache = allPostsData;
+  articulosCache = articulos.filter(estaCompleto);
   return articulosCache;
 }
 
