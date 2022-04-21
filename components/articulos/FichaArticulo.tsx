@@ -5,17 +5,21 @@ import Link from '../Link';
 import Typography from '@mui/material/Typography';
 import { Articulo } from '../../lib/articulos';
 import ImageOrPlaceholder from '../ImageOrPlaceholder';
-import { Grid } from '@mui/material';
+import { Chip, ChipProps, Grid, styled } from '@mui/material';
 
 export interface FichaArticuloProps {
   articulo: Articulo;
 }
 
+const RectangularChip = styled(Chip)<ChipProps>((props) => ({
+  borderRadius: 0,
+}));
+
 export default function FichaArticulo({ articulo }: FichaArticuloProps) {
   return (
     <Link href={`/articulos/${articulo.id}`} underline="none">
       <Card sx={{ display: 'flex' }}>
-        <Grid item xs={4} md={2}>
+        <Grid item xs={4}>
           <ImageOrPlaceholder
             src={articulo.foto1}
             alt="Foto"
@@ -23,13 +27,20 @@ export default function FichaArticulo({ articulo }: FichaArticuloProps) {
             height={200}
           />
         </Grid>
-        <Grid item xs={8} md={10} flexDirection="column">
+        <Grid item xs={8} flexDirection="column">
           <CardContent>
-            <Box sx={{ mb: 1 }}>
-              <Typography gutterBottom variant="subtitle1">
-                {articulo.titulo}
-              </Typography>
-            </Box>
+            <Typography gutterBottom variant="subtitle2">
+              {articulo.titulo}
+            </Typography>
+            <Typography gutterBottom variant="subtitle1">
+              $ 1.500
+            </Typography>
+            <RectangularChip
+              label="Disponible a partir de Junio"
+              variant="outlined"
+              color="warning"
+              size="small"
+            />
           </CardContent>
         </Grid>
       </Card>

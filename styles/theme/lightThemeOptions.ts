@@ -21,6 +21,10 @@ const lightThemeOptions: ThemeOptions = {
       fontWeight: 'bold',
       lineHeight: 1.25,
     },
+    subtitle2: {
+      fontWeight: 'normal',
+      lineHeight: 1.25,
+    },
   },
 };
 
