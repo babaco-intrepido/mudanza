@@ -19,6 +19,7 @@ const lightThemeOptions: ThemeOptions = {
   typography: {
     subtitle1: {
       fontWeight: 'bold',
+      lineHeight: 1.25,
     },
   },
 };
