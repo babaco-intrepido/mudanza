@@ -1,92 +1,34 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import { GetStaticProps, NextPage } from 'next';
-import { all, Articulo } from '../lib/articulos';
-import FichaArticulo from '../components/articulos/FichaArticulo';
+import { NextPage } from 'next';
+import Link from '../components/Link';
 
-export interface IndexProps {
-  articulos: Articulo[];
-}
-
-const Index: NextPage<IndexProps> = ({ articulos }) => {
+const Index: NextPage = () => {
   return (
     <>
-      <main>
-        <Box
-          sx={{
-            bgcolor: 'background.paper',
-            pt: 8,
-            pb: 6,
-          }}
-        >
-          <Container maxWidth="sm">
-            <Typography
-              component="h1"
-              variant="h2"
-              align="center"
-              color="text.primary"
-              gutterBottom
-            >
-              ¡Nos vamos de viaje!
-            </Typography>
-            <Typography
-              variant="h5"
-              align="center"
-              color="text.secondary"
-              paragraph
-            >
-              Y vendemos todo lo que nos quedó.
-            </Typography>
-            <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              <Button variant="contained">Main call to action</Button>
-              <Button variant="outlined">Secondary action</Button>
-            </Stack>
-          </Container>
-        </Box>
-        <Container sx={{ py: 8 }} maxWidth="md">
-          <Grid container spacing={4}>
-            {articulos.map((articulo, index) => (
-              <Grid item key={index} xs={12} sm={6} md={4}>
-                <FichaArticulo articulo={articulo} />
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
-      </main>
-      <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
-        >
-          Something here to give the footer a purpose!
-        </Typography>
-      </Box>
+      <Typography
+        component="h1"
+        variant="h2"
+        align="center"
+        color="text.primary"
+        gutterBottom
+      >
+        ¡Nos vamos de viaje!
+      </Typography>
+      <Typography variant="h5" align="center" color="text.secondary" paragraph>
+        Y queremos circular todo lo que nos quedó. Algunas cosas están a la
+        venta y otras las regalamos.
+      </Typography>
+      <Stack sx={{ pt: 4 }} direction="row" spacing={2} justifyContent="center">
+        <Button component={Link} variant="contained" href="/venta">
+          A la venta
+        </Button>
+        <Button variant="outlined">Regalado</Button>
+      </Stack>
     </>
   );
-};
-
-export const getStaticProps: GetStaticProps<IndexProps> = async () => {
-  const articulos = await all();
-  return {
-    props: {
-      articulos,
-    },
-  };
 };
 
 export default Index;

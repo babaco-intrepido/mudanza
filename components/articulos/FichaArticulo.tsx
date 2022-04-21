@@ -30,7 +30,7 @@ export default function FichaArticulo({ articulo }: FichaArticuloProps) {
       />
       <CardContent sx={{ flexGrow: 1 }}>
         <Box sx={{ mb: 1 }}>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h6">
             {articulo.titulo}
           </Typography>
           <div

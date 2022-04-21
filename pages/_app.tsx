@@ -2,6 +2,8 @@ import * as React from 'react';
 import type { AppProps } from 'next/app';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -28,7 +30,18 @@ const MyApp: React.FunctionComponent<MyAppProps> = (props) => {
       <ThemeProvider theme={lightTheme}>
         <CssBaseline />
         <Header />
-        <Component {...pageProps} />
+        <main>
+          <Box
+            sx={{
+              pt: 8,
+              pb: 6,
+            }}
+          >
+            <Container maxWidth="md">
+              <Component {...pageProps} />
+            </Container>
+          </Box>
+        </main>
       </ThemeProvider>
     </CacheProvider>
   );
