@@ -4,6 +4,8 @@ descripcion: 'Vasijas de barro traidas de Bolivia. Diámetro 15cm. Se pueden met
   al horno. '
 cantidad: 6
 categoria: Vajilla
+precio: 
+entrega: 
 foto1: "/images/articulos/barro1.jpg"
 foto2: "/images/articulos/barro2.jpg"
 foto3: 

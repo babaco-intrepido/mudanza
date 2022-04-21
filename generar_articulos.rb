@@ -23,6 +23,8 @@ def to_articulo(item)
     'descripcion' => item['Descripción'],
     'cantidad' => item['Cantidad'].nil? ? 1 : item['Cantidad'].to_i,
     'categoria' => item['Rubro'],
+    'precio' => item['Valor estimado'].nil? ? nil : Integer(item['Valor estimado']),
+    'entrega' => item['¿Cuándo se entrega?'],
     'foto1' => nombre_foto(item, 1),
     'foto2' => nombre_foto(item, 2),
     'foto3' => nombre_foto(item, 3)
