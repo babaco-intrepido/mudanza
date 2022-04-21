@@ -8,6 +8,7 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import Image from 'next/image';
+import ImageOrPlaceholder from './ImageOrPlaceholder';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -44,7 +45,7 @@ function Carrousel({ images }: CarrouselProps) {
         {images.map((step, index) => (
           <div key={index}>
             {Math.abs(activeStep - index) <= 2 ? (
-              <Image
+              <ImageOrPlaceholder
                 width={500}
                 height={500}
                 src={step}

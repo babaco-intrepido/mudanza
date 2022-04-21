@@ -5,7 +5,7 @@ import Chip from '@mui/material/Chip';
 import Link from '../Link';
 import Typography from '@mui/material/Typography';
 import { Articulo } from '../../lib/articulos';
-import Image from 'next/image';
+import ImageOrPlaceholder from '../ImageOrPlaceholder';
 
 export interface FichaArticuloProps {
   articulo: Articulo;
@@ -15,7 +15,12 @@ export default function FichaArticulo({ articulo }: FichaArticuloProps) {
   return (
     <Link href={`/articulos/${articulo.id}`} underline="none">
       <Card sx={{ display: 'flex' }}>
-        <Image src={articulo.foto1} alt="Foto" width={150} height={150} />
+        <ImageOrPlaceholder
+          src={articulo.foto1}
+          alt="Foto"
+          width={150}
+          height={150}
+        />
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
           <CardContent>
             <Box sx={{ mb: 1 }}>

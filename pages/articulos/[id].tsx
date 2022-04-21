@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { Articulo, getById, ids } from '../../lib/articulos';
 import Carrousel from '../../components/Carrousel';
-import { reject, compose, isEmpty } from 'ramda';
+import { reject, isEmpty, concat } from 'ramda';
 
 interface DetalleArticuloProps {
   articulo: Articulo;
@@ -31,7 +31,10 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
           {articulo.titulo}
         </Typography>
         <Carrousel
-          images={nonEmpty([articulo.foto1, articulo.foto2, articulo.foto3])}
+          images={concat(
+            [articulo.foto1],
+            nonEmpty([articulo.foto2, articulo.foto3])
+          )}
         />
         <div
           dangerouslySetInnerHTML={{
