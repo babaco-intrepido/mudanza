@@ -8,6 +8,7 @@ const netlifyCmsConfig: CmsConfig = {
     repo: 'babaco-intrepido/mudanza',
     branch: 'main',
   },
+  // TODO: ajustar esto para que guarde local
   media_library: {
     name: 'cloudinary',
     config: {

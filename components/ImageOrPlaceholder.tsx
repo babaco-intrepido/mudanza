@@ -8,7 +8,6 @@ export default function ImageOrPlaceholder({
   alt = 'Foto',
   ...props
 }: ImageProps) {
-  console.log({ src: when(isNil, always(placeholder), src) });
   return (
     <Image src={when(isNil, always(placeholder), src)} alt={alt} {...props} />
   );

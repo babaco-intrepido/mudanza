@@ -4,7 +4,8 @@ require 'csv'
 require 'yaml'
 
 CONTENT_DIR = 'content/articulos'
-IMAGES_DIR = 'public/images'
+PUBLIC_DIR = 'public'
+IMAGES_DIR = 'images/articulos'
 archivo = "#{CONTENT_DIR}/Inventario Babaco - Hoja 1.csv"
 
 def snake_case(string)
@@ -13,7 +14,7 @@ end
 
 def nombre_foto(item, numero)
   valor = "#{item['Codigo foto']}#{numero}.jpg"
-  File.exist?("#{IMAGES_DIR}/#{valor}") ? "/images/#{valor}" : nil
+  File.exist?("#{PUBLIC_DIR}/#{IMAGES_DIR}/#{valor}") ? "/#{IMAGES_DIR}/#{valor}" : nil
 end
 
 def to_articulo(item)

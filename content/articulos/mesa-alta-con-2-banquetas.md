@@ -6,6 +6,6 @@ descripcion: |-
   Tiene dos pequeños cajones.
 cantidad: 1
 categoria: Muebles
-foto1: "/images/mesada1.jpg"
+foto1: "/images/articulos/mesada1.jpg"
 foto2: 
 foto3: 
