@@ -13,10 +13,9 @@ async function hydrate(articulo: Articulo, fileName: string) {
   const content = await remark().use(html).process(articulo.descripcion);
   articulo.descripcion = content.toString();
 
-  // TODO: completar con datos reales
-  articulo.precio = Math.round(Math.random() * 15000);
-  if (Math.random() > 0.5) {
-    articulo.entrega = 'Junio';
+  // TODO: quitar cuando todo tenga precio
+  if (isNil(articulo.precio)) {
+    articulo.precio = 1111;
   }
 
   return articulo;
