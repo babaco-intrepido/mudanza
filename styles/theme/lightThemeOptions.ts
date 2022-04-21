@@ -16,6 +16,11 @@ const lightThemeOptions: ThemeOptions = {
       contrastText: '#fff',
     },
   },
+  typography: {
+    subtitle1: {
+      fontWeight: 'bold',
+    },
+  },
 };
 
 export default lightThemeOptions;

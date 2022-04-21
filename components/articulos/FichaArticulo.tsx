@@ -16,42 +16,27 @@ export interface FichaArticuloProps {
 
 export default function FichaArticulo({ articulo }: FichaArticuloProps) {
   return (
-    <Card
-      sx={{
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    >
-      <CardMedia
-        component="img"
-        image={imagenConResolucion(articulo.foto1, { height: 500 })}
-        alt="Foto"
-      />
-      <CardContent sx={{ flexGrow: 1 }}>
-        <Box sx={{ mb: 1 }}>
-          <Typography gutterBottom variant="h6">
-            {articulo.titulo}
-          </Typography>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: articulo.descripcion,
-            }}
-          ></div>
+    <Link href={`/articulos/${articulo.id}`} underline="none">
+      <Card sx={{ display: 'flex' }}>
+        <CardMedia
+          component="img"
+          image={imagenConResolucion(articulo.foto1, { width: 150 })}
+          alt="Foto"
+          sx={{ width: 150 }}
+        />
+        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+          <CardContent>
+            <Box sx={{ mb: 1 }}>
+              <Typography gutterBottom variant="subtitle1">
+                {articulo.titulo}
+              </Typography>
+            </Box>
+            <Box sx={{ mt: 1 }}>
+              <Chip label={articulo.categoria} color="secondary" />
+            </Box>
+          </CardContent>
         </Box>
-        <Box sx={{ mt: 1 }}>
-          <Chip label={articulo.categoria} color="secondary" />
-        </Box>
-      </CardContent>
-      <CardActions>
-        <Button
-          component={Link}
-          size="small"
-          href={`/articulos/${articulo.id}`}
-        >
-          Ver
-        </Button>
-      </CardActions>
-    </Card>
+      </Card>
+    </Link>
   );
 }

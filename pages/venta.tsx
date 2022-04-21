@@ -66,7 +66,7 @@ const Venta: NextPage<VentaProps> = ({ articulos, categoriasDisponibles }) => {
       </Grid>
       <Grid container spacing={4}>
         {articulosVisibles.map((articulo, index) => (
-          <Grid item key={index} xs={12} sm={6} md={4}>
+          <Grid item key={index} xs={12}>
             <FichaArticulo articulo={articulo} />
           </Grid>
         ))}
