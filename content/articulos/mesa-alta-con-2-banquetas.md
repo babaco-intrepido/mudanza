@@ -1,9 +1,11 @@
 ---
-
 titulo: Mesa alta con 2 banquetas
-descripcion:
+descripcion: |-
+  **Mesa:** 40cm ancho x 150cm largo x 100cm alto.
+
+  Tiene dos pequeños cajones.
 cantidad: 1
 categoria: Muebles
-foto1: /IMG_20220420_160641_zqr12u
+foto1: "/images/mesada1.jpg"
 foto2: ''
 foto3: ''

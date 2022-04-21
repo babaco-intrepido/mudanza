@@ -16,7 +16,7 @@ import {
   always,
 } from 'ramda';
 
-const placeholder = '/placeholder_oz5mpd.png';
+const placeholder = '/images/placeholder.png';
 const articulosDirectory = path.join(process.cwd(), 'content/articulos');
 
 async function hydrate(data: Partial<Articulo>, fileName: string) {

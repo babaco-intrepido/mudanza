@@ -3,11 +3,17 @@
 require 'csv'
 require 'yaml'
 
-BASE_DIR = 'content/articulos'
-archivo = "#{BASE_DIR}/Inventario Babaco - Hoja 1.csv"
+CONTENT_DIR = 'content/articulos'
+IMAGES_DIR = 'public/images'
+archivo = "#{CONTENT_DIR}/Inventario Babaco - Hoja 1.csv"
 
 def snake_case(string)
   string.downcase.gsub(' ', '-')
+end
+
+def nombre_foto(item, numero)
+  valor = "#{item['Codigo foto']}#{numero}.jpg"
+  File.exist?("#{IMAGES_DIR}/#{valor}") ? "/images/#{valor}" : ''
 end
 
 def to_articulo(item)
@@ -16,14 +22,14 @@ def to_articulo(item)
     'descripcion' => item['Descripción'],
     'cantidad' => item['Cantidad'].nil? ? 1 : item['Cantidad'].to_i,
     'categoria' => item['Rubro'],
-    'foto1' => item['Foto 1'] || '',
-    'foto2' => item['Foto 2'] || '',
-    'foto3' => item['Foto 3'] || ''
+    'foto1' => nombre_foto(item, 1),
+    'foto2' => nombre_foto(item, 2),
+    'foto3' => nombre_foto(item, 3)
   }
 end
 
 def generar_archivo(articulo)
-  File.open("#{BASE_DIR}/#{snake_case(articulo['titulo'].gsub('/', ''))}.md", 'w') do |out|
+  File.open("#{CONTENT_DIR}/#{snake_case(articulo['titulo'].gsub('/', ''))}.md", 'w') do |out|
     YAML.dump(articulo, out)
   end
 end
