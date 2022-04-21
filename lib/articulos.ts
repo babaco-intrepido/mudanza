@@ -3,7 +3,7 @@ import matter from 'gray-matter';
 import path from 'path';
 import { remark } from 'remark';
 import html from 'remark-html';
-import { find, whereEq, map, prop } from 'ramda';
+import { find, whereEq, map, prop, compose, uniq } from 'ramda';
 
 const articulosDirectory = path.join(process.cwd(), 'content/articulos');
 
@@ -63,4 +63,12 @@ export async function ids(): Promise<string[]> {
 
 export async function getById(id: string): Promise<Articulo> {
   return fetchArticulos().then(find(whereEq({ id }))) as Promise<Articulo>;
+}
+
+export async function categorias(): Promise<string[]> {
+  const articulos = await fetchArticulos();
+  return compose(
+    uniq,
+    map((it: Articulo) => it.categoria)
+  )(articulos);
 }
