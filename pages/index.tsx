@@ -25,7 +25,9 @@ const Index: NextPage = () => {
         <Button component={Link} variant="contained" href="/venta">
           A la venta
         </Button>
-        <Button variant="outlined">Regalado</Button>
+        <Button component={Link} variant="outlined" href="/regalo">
+          Regalado
+        </Button>
       </Stack>
     </>
   );

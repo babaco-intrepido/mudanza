@@ -9,11 +9,15 @@ import { partition } from 'ramda';
 export interface ListadoArticulosProps {
   articulos: Articulo[];
   categoriasDisponibles: string[];
+  subtitulo: string;
+  mostrarPrecio?: boolean;
 }
 
 export default function ListadoArticulos({
   articulos,
   categoriasDisponibles,
+  subtitulo,
+  mostrarPrecio = true,
 }: ListadoArticulosProps) {
   const [categoriasVisibles, setCategoriasVisibles] = React.useState(
     categoriasDisponibles.map((label, key) => ({ key, label, enabled: true }))
@@ -56,7 +60,7 @@ export default function ListadoArticulos({
         gutterBottom
         sx={{ mb: 3 }}
       >
-        Artículos a la venta
+        Artículos {subtitulo}
       </Typography>
       <Grid mb={5}>
         <SelectorCategorias
@@ -67,7 +71,7 @@ export default function ListadoArticulos({
       <Grid container spacing={4}>
         {articulosVisibles.map((articulo, index) => (
           <Grid item key={index} xs={12} lg={6}>
-            <FichaArticulo articulo={articulo} />
+            <FichaArticulo articulo={articulo} mostrarPrecio={mostrarPrecio} />
           </Grid>
         ))}
       </Grid>

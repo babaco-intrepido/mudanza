@@ -10,9 +10,13 @@ import Entrega from './Entrega';
 
 export interface FichaArticuloProps {
   articulo: Articulo;
+  mostrarPrecio: boolean;
 }
 
-export default function FichaArticulo({ articulo }: FichaArticuloProps) {
+export default function FichaArticulo({
+  articulo,
+  mostrarPrecio,
+}: FichaArticuloProps) {
   return (
     <Link href={`/articulos/${articulo.id}`} underline="none">
       <Card sx={{ display: 'flex' }}>
@@ -29,9 +33,11 @@ export default function FichaArticulo({ articulo }: FichaArticuloProps) {
             <Typography gutterBottom variant="subtitle2">
               {articulo.titulo}
             </Typography>
-            <Typography gutterBottom variant="subtitle1">
-              <Precio importe={articulo.precio} />
-            </Typography>
+            {mostrarPrecio && (
+              <Typography gutterBottom variant="subtitle1">
+                <Precio importe={articulo.precio} />
+              </Typography>
+            )}
             <Entrega articulo={articulo} size="small" />
           </CardContent>
         </Grid>

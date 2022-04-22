@@ -3,23 +3,24 @@ import { GetStaticProps, NextPage } from 'next';
 import { todos, Articulo, categorias } from '../lib/articulos';
 import ListadoArticulos from '../components/articulos/ListadoArticulos';
 
-export interface VentaProps {
+export interface RegaloProps {
   articulos: Articulo[];
   categoriasDisponibles: string[];
 }
 
-const Venta: NextPage<VentaProps> = ({ articulos, categoriasDisponibles }) => {
+const Venta: NextPage<RegaloProps> = ({ articulos, categoriasDisponibles }) => {
   return (
     <ListadoArticulos
       articulos={articulos}
       categoriasDisponibles={categoriasDisponibles}
-      subtitulo="a la venta"
+      subtitulo="para regalar"
+      mostrarPrecio={false}
     />
   );
 };
 
-export const getStaticProps: GetStaticProps<VentaProps> = async () => {
-  const destino = 'Vender';
+export const getStaticProps: GetStaticProps<RegaloProps> = async () => {
+  const destino = 'Regalar';
   return {
     props: {
       articulos: await todos(destino),

@@ -3,7 +3,7 @@ import matter from 'gray-matter';
 import path from 'path';
 import { remark } from 'remark';
 import html from 'remark-html';
-import { find, whereEq, map, prop, compose, uniq, isNil } from 'ramda';
+import { find, whereEq, map, prop, compose, uniq, isNil, filter } from 'ramda';
 
 const articulosDirectory = path.join(process.cwd(), 'content/articulos');
 
@@ -47,12 +47,13 @@ async function fetchArticulos(): Promise<Articulo[]> {
   return articulosCache;
 }
 
+type Destino = 'Vender' | 'Regalar';
 export interface Articulo {
   id: string;
   titulo: string;
   cantidad: number;
   descripcion: string;
-  destino: 'Vender' | 'Regalar';
+  destino: Destino;
   categoria: string;
   precio: number;
   entrega?: string;
@@ -61,8 +62,8 @@ export interface Articulo {
   foto3: string;
 }
 
-export async function all(): Promise<Articulo[]> {
-  return fetchArticulos();
+export async function todos(destino: Destino): Promise<Articulo[]> {
+  return fetchArticulos().then(filter(whereEq({ destino })));
 }
 
 export async function ids(): Promise<string[]> {
@@ -73,8 +74,8 @@ export async function getById(id: string): Promise<Articulo> {
   return fetchArticulos().then(find(whereEq({ id }))) as Promise<Articulo>;
 }
 
-export async function categorias(): Promise<string[]> {
-  const articulos = await fetchArticulos();
+export async function categorias(destino: Destino): Promise<string[]> {
+  const articulos = await todos(destino);
   return compose(
     uniq,
     map((it: Articulo) => it.categoria)
