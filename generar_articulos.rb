@@ -31,10 +31,14 @@ def to_articulo(item)
   }
 end
 
-def generar_archivo(articulo)
+def generar_archivo!(articulo)
   File.open("#{CONTENT_DIR}/#{snake_case(articulo['titulo'].gsub('/', ''))}.md", 'w') do |out|
     YAML.dump(articulo, out)
   end
+end
+
+def limpiar_archivos!
+  Dir["#{CONTENT_DIR}/*.md"].each { |it| File.unlink it }
 end
 
 inventario = CSV.read(archivo, headers: true).map(&:to_h)
@@ -47,4 +51,5 @@ articulos =
 
 puts "Se encontraron #{articulos.size} articulos"
 
-articulos.each(&method(:generar_archivo))
+limpiar_archivos!
+articulos.each(&method(:generar_archivo!))
