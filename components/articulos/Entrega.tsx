@@ -11,14 +11,14 @@ export interface EntregaProps {
 }
 
 export default function Entrega({ articulo, size }: EntregaProps) {
-  return (
-    articulo.entrega && (
-      <RectangularChip
-        label={`Disponible a partir de ${articulo.entrega}`}
-        variant="outlined"
-        color="warning"
-        size={size}
-      />
-    )
+  return articulo.entrega ? (
+    <RectangularChip
+      label={`Disponible a partir de ${articulo.entrega}`}
+      variant="outlined"
+      color="warning"
+      size={size}
+    />
+  ) : (
+    <></>
   );
 }
