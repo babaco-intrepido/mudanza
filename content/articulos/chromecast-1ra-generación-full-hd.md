@@ -4,6 +4,7 @@ descripcion: Sirve para ver YouTube, Netflix, Spotify y cualquier otra aplicaci√
   que se pueda enviar a una tele.
 cantidad: 1
 categoria: Electrodom√©sticos
+destino: Vender
 precio: 2000
 entrega: 
 foto1: "/images/articulos/chromecast1.jpg"

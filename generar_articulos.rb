@@ -17,13 +17,21 @@ def nombre_foto(item, numero)
   File.exist?("#{PUBLIC_DIR}/#{IMAGES_DIR}/#{valor}") ? "/#{IMAGES_DIR}/#{valor}" : nil
 end
 
+def calcular_precio(articulo)
+  return 0 if articulo['Destino'] == 'Regalar'
+  return nil if articulo['Valor estimado'].nil?
+
+  Integer(articulo['Valor estimado'])
+end
+
 def to_articulo(item)
   {
     'titulo' => item['Nombre'],
     'descripcion' => item['Descripción'],
     'cantidad' => item['Cantidad'].nil? ? 1 : item['Cantidad'].to_i,
     'categoria' => item['Rubro'],
-    'precio' => item['Valor estimado'].nil? ? nil : Integer(item['Valor estimado']),
+    'destino' => item['Destino'],
+    'precio' => calcular_precio(item),
     'entrega' => item['¿Cuándo se entrega?'],
     'foto1' => nombre_foto(item, 1),
     'foto2' => nombre_foto(item, 2),

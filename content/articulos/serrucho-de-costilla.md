@@ -3,6 +3,7 @@ titulo: Serrucho de costilla
 descripcion: 
 cantidad: 1
 categoria: Herramientas
+destino: Llevar/Vender
 precio: 
 entrega: 
 foto1: 

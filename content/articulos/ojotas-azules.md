@@ -3,7 +3,8 @@ titulo: Ojotas azules
 descripcion: 
 cantidad: 1
 categoria: Calzado
-precio: 
+destino: Regalar
+precio: 0
 entrega: 
 foto1: 
 foto2: 

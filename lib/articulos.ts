@@ -52,6 +52,7 @@ export interface Articulo {
   titulo: string;
   cantidad: number;
   descripcion: string;
+  destino: 'Vender' | 'Regalar';
   categoria: string;
   precio: number;
   entrega?: string;

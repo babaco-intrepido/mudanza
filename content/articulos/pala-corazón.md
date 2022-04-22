@@ -3,6 +3,7 @@ titulo: Pala corazón
 descripcion: 
 cantidad: 1
 categoria: Huerta
+destino: Vender
 precio: 
 entrega: 
 foto1: 

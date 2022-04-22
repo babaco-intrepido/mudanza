@@ -3,7 +3,8 @@ titulo: Fuente torta
 descripcion: 
 cantidad: 1
 categoria: Cocina
-precio: 
+destino: Regalar
+precio: 0
 entrega: 
 foto1: 
 foto2: 

@@ -6,6 +6,7 @@ descripcion: |-
   Tiene dos pequeños cajones.
 cantidad: 1
 categoria: Muebles
+destino: Vender
 precio: 8000
 entrega: 
 foto1: "/images/articulos/mesada1.jpg"

@@ -4,6 +4,7 @@ descripcion: 'Medidas: diámetro 20'''' (50cm), altura regulable hasta 1.70m. 3 
   Oscilante.'
 cantidad: 1
 categoria: Electrodomésticos
+destino: Vender
 precio: 8000
 entrega: 
 foto1: "/images/articulos/bonn1.jpg"

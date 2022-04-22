@@ -8,6 +8,7 @@ descripcion: |-
   - Muy poco uso, comprada en 2022.
 cantidad: 1
 categoria: Herramientas
+destino: Vender
 precio: 15000
 entrega: Junio
 foto1: 

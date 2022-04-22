@@ -3,7 +3,8 @@ titulo: Especiero Fede
 descripcion: 
 cantidad: 1
 categoria: Muebles
-precio: 
+destino: Regalar
+precio: 0
 entrega: 
 foto1: "/images/articulos/especierofede1.jpg"
 foto2: 

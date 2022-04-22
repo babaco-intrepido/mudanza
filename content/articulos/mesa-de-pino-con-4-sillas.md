@@ -3,6 +3,7 @@ titulo: Mesa de pino con 4 sillas
 descripcion: 'Mesa: 80cm ancho x 140cm largo.'
 cantidad: 1
 categoria: Muebles
+destino: Vender
 precio: 10000
 entrega: 
 foto1: "/images/articulos/mesa1.jpg"

@@ -3,6 +3,7 @@ titulo: Zapatillas cuero
 descripcion: 
 cantidad: 1
 categoria: Calzado
+destino: Vender
 precio: 
 entrega: 
 foto1: 

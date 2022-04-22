@@ -3,6 +3,7 @@ titulo: Cuenco India
 descripcion: 
 cantidad: 1
 categoria: Vajilla
+destino: Vender
 precio: 
 entrega: 
 foto1: "/images/articulos/india1.jpg"

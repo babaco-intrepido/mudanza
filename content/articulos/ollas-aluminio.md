@@ -3,7 +3,8 @@ titulo: Ollas aluminio
 descripcion: 
 cantidad: 4
 categoria: Cocina
-precio: 
+destino: Regalar
+precio: 0
 entrega: 
 foto1: 
 foto2: 

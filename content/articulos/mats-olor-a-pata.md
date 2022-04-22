@@ -3,7 +3,8 @@ titulo: Mats olor a pata
 descripcion: 
 cantidad: 2
 categoria: 
-precio: 
+destino: Regalar
+precio: 0
 entrega: 
 foto1: 
 foto2: 

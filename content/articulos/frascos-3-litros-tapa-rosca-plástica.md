@@ -4,6 +4,7 @@ descripcion: Diámetro 50cm, alto 22cm, capacidad total 3 litros. Con tapa blanc
   roja según disponibilidad. La etiqueta es pintura de pizarrón, se puede sacar.
 cantidad: 1
 categoria: 
+destino: Vender
 precio: 700
 entrega: 
 foto1: 

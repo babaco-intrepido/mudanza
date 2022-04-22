@@ -6,6 +6,7 @@ descripcion: |-
   Incluye cargador original.
 cantidad: 1
 categoria: Electrodomésticos
+destino: Vender
 precio: 4000
 entrega: 
 foto1: "/images/articulos/chromaudio1.jpg"

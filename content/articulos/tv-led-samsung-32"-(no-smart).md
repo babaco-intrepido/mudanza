@@ -4,6 +4,7 @@ descripcion: Muy bien cuidada, con control original. No es smart pero se puede "
   usando el Chromecast.
 cantidad: 1
 categoria: Electrodomésticos
+destino: Vender
 precio: 15000
 entrega: 
 foto1: "/images/articulos/tele1.jpg"

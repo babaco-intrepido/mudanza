@@ -3,7 +3,8 @@ titulo: Cubitos chicos
 descripcion: 
 cantidad: 1
 categoria: Muebles
-precio: 
+destino: Regalar
+precio: 0
 entrega: 
 foto1: 
 foto2: 

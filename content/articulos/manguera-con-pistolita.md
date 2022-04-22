@@ -3,6 +3,7 @@ titulo: Manguera con pistolita
 descripcion: 
 cantidad: 1
 categoria: 
+destino: Vender
 precio: 
 entrega: 
 foto1: 

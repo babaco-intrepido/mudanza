@@ -3,7 +3,8 @@ titulo: Exprimidora jugo
 descripcion: 
 cantidad: 1
 categoria: 
-precio: 
+destino: Regalar
+precio: 0
 entrega: 
 foto1: 
 foto2: 

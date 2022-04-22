@@ -4,6 +4,7 @@ descripcion: 'Medidas: 60.5 x 66.7 x 165cm. Funciona perfecto, le cambiamos el b
   de la heladera hace un mes.'
 cantidad: 1
 categoria: Electrodomésticos
+destino: Vender
 precio: 25000
 entrega: 
 foto1: "/images/articulos/heladera1.jpg"

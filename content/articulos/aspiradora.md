@@ -3,7 +3,8 @@ titulo: Aspiradora
 descripcion: 
 cantidad: 1
 categoria: Electrodomésticos
-precio: 
+destino: Regalar
+precio: 0
 entrega: 
 foto1: 
 foto2: 

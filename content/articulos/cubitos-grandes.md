@@ -3,7 +3,8 @@ titulo: Cubitos grandes
 descripcion: 
 cantidad: 2
 categoria: Muebles
-precio: 
+destino: Regalar
+precio: 0
 entrega: 
 foto1: 
 foto2: 

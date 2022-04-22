@@ -7,6 +7,7 @@ descripcion: |-
   - Cable 1,85m
 cantidad: 1
 categoria: Herramientas
+destino: Vender
 precio: 4000
 entrega: Junio
 foto1: 

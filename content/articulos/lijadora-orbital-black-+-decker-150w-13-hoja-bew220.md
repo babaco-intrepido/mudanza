@@ -8,6 +8,7 @@ descripcion: |-
   - Longitud de cable: 2 metros
 cantidad: 1
 categoria: Herramientas
+destino: Vender
 precio: 5000
 entrega: Junio
 foto1: 

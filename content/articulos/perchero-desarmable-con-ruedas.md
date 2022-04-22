@@ -3,7 +3,8 @@ titulo: Perchero desarmable con ruedas
 descripcion: 'Medidas: COMPLETAR.'
 cantidad: 1
 categoria: 
-precio: 800
+destino: Regalar
+precio: 0
 entrega: 
 foto1: 
 foto2: 

@@ -3,7 +3,8 @@ titulo: Palita metal
 descripcion: 
 cantidad: 1
 categoria: Huerta
-precio: 
+destino: Regalar
+precio: 0
 entrega: 
 foto1: 
 foto2: 

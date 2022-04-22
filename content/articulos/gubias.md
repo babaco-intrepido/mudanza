@@ -3,6 +3,7 @@ titulo: Gubias
 descripcion: 
 cantidad: 1
 categoria: Herramientas
+destino: Llevar/Vender
 precio: 
 entrega: 
 foto1: 

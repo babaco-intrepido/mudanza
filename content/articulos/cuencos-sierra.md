@@ -3,7 +3,8 @@ titulo: Cuencos Sierra
 descripcion: 
 cantidad: 2
 categoria: Vajilla
-precio: 
+destino: Regalar
+precio: 0
 entrega: 
 foto1: 
 foto2: 
