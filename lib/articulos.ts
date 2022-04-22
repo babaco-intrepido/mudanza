@@ -13,18 +13,13 @@ async function hydrate(articulo: Articulo, fileName: string) {
   const content = await remark().use(html).process(articulo.descripcion);
   articulo.descripcion = content.toString();
 
-  // TODO: quitar cuando todo tenga precio
-  if (isNil(articulo.precio)) {
-    articulo.precio = 1111;
-  }
-
   return articulo;
 }
 
 let articulosCache: Articulo[];
 
 function estaCompleto(articulo: Articulo) {
-  return !isNil(articulo.categoria);
+  return !isNil(articulo.categoria) && !isNil(articulo.precio);
 }
 
 async function fetchArticulos(): Promise<Articulo[]> {
