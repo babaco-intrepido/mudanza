@@ -31,12 +31,7 @@ const MyApp: React.FunctionComponent<MyAppProps> = (props) => {
         <CssBaseline />
         <Header />
         <main>
-          <Box
-            sx={{
-              pt: 8,
-              pb: 6,
-            }}
-          >
+          <Box sx={{ pt: 4, pb: 4 }}>
             <Container maxWidth="md">
               <Component {...pageProps} />
             </Container>

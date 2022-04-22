@@ -5,15 +5,12 @@ import Typography from '@mui/material/Typography';
 import { Articulo } from '../../lib/articulos';
 import ImageOrPlaceholder from '../ImageOrPlaceholder';
 import Precio from '../Precio';
-import { Chip, ChipProps, Grid, styled } from '@mui/material';
+import { Grid } from '@mui/material';
+import Entrega from './Entrega';
 
 export interface FichaArticuloProps {
   articulo: Articulo;
 }
-
-const RectangularChip = styled(Chip)<ChipProps>(() => ({
-  borderRadius: 5,
-}));
 
 export default function FichaArticulo({ articulo }: FichaArticuloProps) {
   return (
@@ -35,14 +32,7 @@ export default function FichaArticulo({ articulo }: FichaArticuloProps) {
             <Typography gutterBottom variant="subtitle1">
               <Precio importe={articulo.precio} />
             </Typography>
-            {articulo.entrega && (
-              <RectangularChip
-                label={`Disponible a partir de ${articulo.entrega}`}
-                variant="outlined"
-                color="warning"
-                size="small"
-              />
-            )}
+            <Entrega articulo={articulo} size="small" />
           </CardContent>
         </Grid>
       </Card>

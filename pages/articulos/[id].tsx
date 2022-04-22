@@ -7,8 +7,9 @@ import { Articulo, getById, ids } from '../../lib/articulos';
 import Carrousel from '../../components/Carrousel';
 import { reject, concat, isNil } from 'ramda';
 import Precio from '../../components/Precio';
-import { Button } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import Entrega from '../../components/articulos/Entrega';
 
 interface DetalleArticuloProps {
   articulo: Articulo;
@@ -37,7 +38,6 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'center',
         }}
       >
         <Typography variant="h5" gutterBottom>
@@ -46,6 +46,9 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
         <Typography variant="h4" gutterBottom>
           <Precio importe={articulo.precio} />
         </Typography>
+        <Grid mb={2}>
+          <Entrega articulo={articulo} size="medium" />
+        </Grid>
         <Carrousel
           images={concat(
             [articulo.foto1],
