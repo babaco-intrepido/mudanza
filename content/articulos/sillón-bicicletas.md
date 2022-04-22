@@ -1,6 +1,6 @@
 ---
 titulo: Sillón bicicletas
-descripcion: 
+descripcion: "**Medidas:** \n\nTiene algunos detalles, ver fotos."
 cantidad: 1
 categoria: Muebles
 precio: 

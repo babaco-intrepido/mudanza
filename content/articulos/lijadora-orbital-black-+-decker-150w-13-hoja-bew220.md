@@ -8,7 +8,7 @@ descripcion: |-
   - Longitud de cable: 2 metros
 cantidad: 1
 categoria: Herramientas
-precio: 
+precio: 5000
 entrega: Junio
 foto1: 
 foto2: 

@@ -7,7 +7,7 @@ descripcion: |-
   - Viene con su caja-maletín y algunas mechas (ver foto).
 cantidad: 1
 categoria: Herramientas
-precio: 
+precio: 5000
 entrega: Junio
 foto1: 
 foto2: 

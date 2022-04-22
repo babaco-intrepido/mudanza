@@ -5,9 +5,10 @@ descripcion: |-
   - Profundidad de corte de 45 grados: 45mm.
   - Mide 232mm de ancho, 257mm de alto y 347mm de largo.
   - Incluye disco de corte (ver foto)
+  - Muy poco uso, comprada en 2022.
 cantidad: 1
 categoria: Herramientas
-precio: 
+precio: 15000
 entrega: Junio
 foto1: 
 foto2: 
