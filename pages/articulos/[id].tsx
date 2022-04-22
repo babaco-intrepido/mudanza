@@ -6,6 +6,9 @@ import Box from '@mui/material/Box';
 import { Articulo, getById, ids } from '../../lib/articulos';
 import Carrousel from '../../components/Carrousel';
 import { reject, concat, isNil } from 'ramda';
+import Precio from '../../components/Precio';
+import { Button } from '@mui/material';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 interface DetalleArticuloProps {
   articulo: Articulo;
@@ -13,22 +16,35 @@ interface DetalleArticuloProps {
 
 const nonNil = reject(isNil);
 
+function makeWhatsAppLink(mensaje: string) {
+  return `https://wa.me/541168340304?text=${encodeURIComponent(mensaje)}`;
+}
+
 const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
   articulo,
 }: DetalleArticuloProps) => {
+  const linkWhatsApp = React.useMemo(
+    () =>
+      makeWhatsAppLink(
+        `¡Hola! 👋\nEstoy viendo el sitio de la mudanza y me gustaría comprar *${articulo.titulo}*.`
+      ),
+    [articulo]
+  );
+
   return (
     <Container maxWidth="lg">
       <Box
         sx={{
-          my: 4,
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
           alignItems: 'center',
         }}
       >
-        <Typography variant="h4" component="h1" gutterBottom>
+        <Typography variant="h5" gutterBottom>
           {articulo.titulo}
+        </Typography>
+        <Typography variant="h4" gutterBottom>
+          <Precio importe={articulo.precio} />
         </Typography>
         <Carrousel
           images={concat(
@@ -41,6 +57,15 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
             __html: articulo.descripcion,
           }}
         ></div>
+        <Button
+          color="primary"
+          variant="contained"
+          startIcon={<WhatsAppIcon />}
+          href={linkWhatsApp}
+          fullWidth
+        >
+          ¡Lo quiero!
+        </Button>
       </Box>
     </Container>
   );

@@ -1,10 +1,10 @@
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Link from '../Link';
 import Typography from '@mui/material/Typography';
 import { Articulo } from '../../lib/articulos';
 import ImageOrPlaceholder from '../ImageOrPlaceholder';
+import Precio from '../Precio';
 import { Chip, ChipProps, Grid, styled } from '@mui/material';
 
 export interface FichaArticuloProps {
@@ -33,7 +33,7 @@ export default function FichaArticulo({ articulo }: FichaArticuloProps) {
               {articulo.titulo}
             </Typography>
             <Typography gutterBottom variant="subtitle1">
-              $ {articulo.precio.toLocaleString('es-AR')}
+              <Precio importe={articulo.precio} />
             </Typography>
             {articulo.entrega && (
               <RectangularChip
