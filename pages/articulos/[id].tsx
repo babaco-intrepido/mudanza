@@ -2,12 +2,11 @@ import * as React from 'react';
 import { NextPage, GetStaticPaths, GetStaticProps } from 'next';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
 import { Articulo, getById, ids } from '../../lib/articulos';
 import Carrousel from '../../components/Carrousel';
 import { reject, concat, isNil } from 'ramda';
 import Precio from '../../components/Precio';
-import { Button, Grid } from '@mui/material';
+import { Button, Grid, useMediaQuery, useTheme } from '@mui/material';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Entrega from '../../components/articulos/Entrega';
 
@@ -24,6 +23,9 @@ function makeWhatsAppLink(mensaje: string) {
 const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
   articulo,
 }: DetalleArticuloProps) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
   const linkWhatsApp = React.useMemo(
     () =>
       makeWhatsAppLink(
@@ -32,44 +34,70 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
     [articulo]
   );
 
+  const Titular = (
+    <>
+      {' '}
+      <Typography variant="h5" gutterBottom>
+        {articulo.titulo}
+      </Typography>
+      <Typography variant="h4" gutterBottom>
+        <Precio importe={articulo.precio} />
+      </Typography>
+      <Grid mb={2}>
+        <Entrega articulo={articulo} size="medium" />
+      </Grid>
+    </>
+  );
+
+  const Imagenes = (
+    <Carrousel
+      images={concat(
+        [articulo.foto1],
+        nonNil([articulo.foto2, articulo.foto3])
+      )}
+    />
+  );
+
+  const DescripcionBoton = (
+    <>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: articulo.descripcion,
+        }}
+      ></div>
+      <Button
+        color="primary"
+        variant="contained"
+        startIcon={<WhatsAppIcon />}
+        href={linkWhatsApp}
+        fullWidth
+      >
+        ¡Lo quiero!
+      </Button>
+    </>
+  );
+
   return (
     <Container maxWidth="lg">
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-        }}
-      >
-        <Typography variant="h5" gutterBottom>
-          {articulo.titulo}
-        </Typography>
-        <Typography variant="h4" gutterBottom>
-          <Precio importe={articulo.precio} />
-        </Typography>
-        <Grid mb={2}>
-          <Entrega articulo={articulo} size="medium" />
+      {isMobile ? (
+        <Grid container direction="column">
+          {Titular}
+          {Imagenes}
+          {DescripcionBoton}
         </Grid>
-        <Carrousel
-          images={concat(
-            [articulo.foto1],
-            nonNil([articulo.foto2, articulo.foto3])
-          )}
-        />
-        <div
-          dangerouslySetInnerHTML={{
-            __html: articulo.descripcion,
-          }}
-        ></div>
-        <Button
-          color="primary"
-          variant="contained"
-          startIcon={<WhatsAppIcon />}
-          href={linkWhatsApp}
-          fullWidth
-        >
-          ¡Lo quiero!
-        </Button>
-      </Box>
+      ) : (
+        <Grid container spacing={4}>
+          <Grid item md={6}>
+            {Imagenes}
+          </Grid>
+          <Grid item md={6}>
+            <Grid container direction="column">
+              {Titular}
+              {DescripcionBoton}
+            </Grid>
+          </Grid>
+        </Grid>
+      )}
     </Container>
   );
 };
