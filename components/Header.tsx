@@ -1,18 +1,14 @@
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Link from './Link';
+import ResponsiveAppBar from './ResponsiveAppBar';
+import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+const pages = [
+  { name: 'Venta', href: '/venta', icon: <ShoppingCartIcon /> },
+  { name: 'Regalo', href: '/regalo', icon: <CardGiftcardIcon /> },
+];
 
 const Header = () => {
-  return (
-    <AppBar position="relative">
-      <Toolbar>
-        <Link href="/" variant="h6" color="inherit" underline="none" noWrap>
-          ¡Vendemos todo!
-        </Link>
-      </Toolbar>
-    </AppBar>
-  );
+  return <ResponsiveAppBar pages={pages} />;
 };
 
 export default Header;
