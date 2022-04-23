@@ -4,7 +4,7 @@ descripcion: "**Diámetro** 12cm."
 cantidad: 1
 categoria: Vajilla
 destino: Vender
-precio: 
+precio: 400
 entrega: 
 foto1: 
 foto2: 

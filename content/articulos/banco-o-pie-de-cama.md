@@ -1,5 +1,5 @@
 ---
-titulo: Sillón bicicletas
+titulo: Banco o pie de cama
 descripcion: |-
   **Medidas:** 54cm ancho x 125cm largo x 37cm alto.
 
@@ -7,7 +7,7 @@ descripcion: |-
 cantidad: 1
 categoria: Muebles
 destino: Vender
-precio: 
+precio: 4000
 entrega: 
 foto1: 
 foto2: 

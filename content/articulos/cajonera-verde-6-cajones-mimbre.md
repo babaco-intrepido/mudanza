@@ -7,7 +7,7 @@ descripcion: |-
 cantidad: 1
 categoria: Muebles
 destino: Vender
-precio: 
+precio: 5000
 entrega: 
 foto1: "/images/articulos/cajoneramimbre1.jpg"
 foto2: 

@@ -5,7 +5,7 @@ descripcion: 'Vasijas de barro traidas de Bolivia. **Diámetro** 15cm. Se pueden
 cantidad: 6
 categoria: Vajilla
 destino: Vender
-precio: 
+precio: 300
 entrega: 
 foto1: "/images/articulos/barro1.jpg"
 foto2: "/images/articulos/barro2.jpg"

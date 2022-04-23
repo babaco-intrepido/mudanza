@@ -1,7 +1,8 @@
 ---
 titulo: Ventilador de pie BONN 140W
-descripcion: 'Medidas: diámetro 20'''' (50cm), altura regulable hasta 1.70m. 3 velocidades.
-  Oscilante.'
+descripcion: "**Medidas:** diámetro 20'' (50cm), altura regulable hasta 1.70m. \n\nEs
+  _muy_ potente, tiene 3 velocidades (solo hemos usado la primera). Se puede poner
+  fijo u oscilante."
 cantidad: 1
 categoria: Electrodomésticos
 destino: Vender
