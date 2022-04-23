@@ -1,6 +1,9 @@
 ---
 titulo: Cajonera verde 6 cajones mimbre
-descripcion: 
+descripcion: |-
+  **Mueble completo:** 30cm profundidad x 90cm ancho x 78cm alto.
+
+  **Cajones:** 27cm profunidad x 38cm ancho x 20cm alto.
 cantidad: 1
 categoria: Muebles
 destino: Vender

@@ -1,6 +1,6 @@
 ---
 titulo: Cuenco India
-descripcion: 
+descripcion: "**Diámetro** 16cm."
 cantidad: 1
 categoria: Vajilla
 destino: Vender

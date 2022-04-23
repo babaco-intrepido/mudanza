@@ -1,6 +1,6 @@
 ---
 titulo: Platos vidrio planos
-descripcion: Diámetro 22cm.
+descripcion: "**Diámetro** 22cm."
 cantidad: 3
 categoria: Vajilla
 destino: Vender

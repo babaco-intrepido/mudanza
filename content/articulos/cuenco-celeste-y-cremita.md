@@ -1,6 +1,6 @@
 ---
 titulo: Cuenco celeste y cremita
-descripcion: 
+descripcion: "**Diámetro** 12cm."
 cantidad: 1
 categoria: Vajilla
 destino: Vender

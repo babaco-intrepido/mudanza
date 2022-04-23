@@ -1,6 +1,6 @@
 ---
 titulo: Cuenco con pico
-descripcion: 
+descripcion: "**Diámetro** 13cm."
 cantidad: 1
 categoria: Vajilla
 destino: Vender

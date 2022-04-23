@@ -4,7 +4,7 @@ descripcion: |-
   - Bolsa de polvo: Sí
   - Interruptor sellado contra polvo
   - numero de oscilaciones: 14000 opm
-  - Diámetro de órbita: 92x230
+  - **Diámetro** de órbita: 92x230
   - Longitud de cable: 2 metros
 cantidad: 1
 categoria: Herramientas

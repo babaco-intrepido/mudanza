@@ -1,6 +1,6 @@
 ---
 titulo: Cuencos de barro
-descripcion: 'Vasijas de barro traidas de Bolivia. Diámetro 15cm. Se pueden meter
+descripcion: 'Vasijas de barro traidas de Bolivia. **Diámetro** 15cm. Se pueden meter
   al horno. '
 cantidad: 6
 categoria: Vajilla

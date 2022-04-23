@@ -1,6 +1,6 @@
 ---
 titulo: Ensaladera de gres
-descripcion: Diámetro 30cm, alto 15cm. Producto de La Materia Encendida.
+descripcion: "**Diámetro** 30cm, alto 15cm. Producto de La Materia Encendida."
 cantidad: 1
 categoria: Vajilla
 destino: Vender

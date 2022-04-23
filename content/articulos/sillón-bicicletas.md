@@ -1,6 +1,9 @@
 ---
 titulo: Sillón bicicletas
-descripcion: "**Medidas:** \n\nTiene algunos detalles, ver fotos."
+descripcion: |-
+  **Medidas:** 54cm ancho x 125cm largo x 37cm alto.
+
+  Tiene algunos detalles, ver fotos.
 cantidad: 1
 categoria: Muebles
 destino: Vender
