@@ -1,7 +1,7 @@
 ---
-titulo: Cuencos de barro
-descripcion: 'Vasijas de barro traidas de Bolivia. **Diámetro** 15cm. Se pueden meter
-  al horno. '
+titulo: Vasijas de barro
+descripcion: "**Diámetro:** 15cm. \n\nCompradas en Bolivia. Ya están curads, se pueden
+  meter al horno o microondas."
 cantidad: 6
 categoria: Vajilla
 destino: Vender
