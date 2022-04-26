@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+.remark a {
+  text-decoration: revert;
+}
+
 * {
   box-sizing: border-box;
 }

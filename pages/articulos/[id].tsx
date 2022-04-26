@@ -71,6 +71,7 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
   const DescripcionBoton = (
     <>
       <div
+        className="remark"
         dangerouslySetInnerHTML={{
           __html: articulo.descripcion,
         }}
