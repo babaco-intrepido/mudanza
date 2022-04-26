@@ -17,7 +17,7 @@ function makeNextImagePath(path: string, width: number, quality: number) {
   return `_next/image?url=${encodeURIComponent(path)}&w=${width}&q=${quality}`;
 }
 
-export function getImagePath(originalImageUrl: string) {
+export function getImagePath(originalImageUrl: string | undefined) {
   if (isNil(originalImageUrl)) {
     return placeholder.src;
   }
