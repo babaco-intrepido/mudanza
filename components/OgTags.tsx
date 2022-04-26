@@ -25,7 +25,7 @@ export default function OgTags({
 }: OgTagsProps) {
   const site = '¡Nos mudamos!';
   const imagePath = originalImageUrl?.replace(siteUrl, '') || placeholder.src;
-  const imageUrl = `${siteUrl}/${makeNextImagePath(imagePath, 750, 75)}`;
+  const imageUrl = `${makeNextImagePath(imagePath, 750, 75)}`;
 
   return (
     <Head>
