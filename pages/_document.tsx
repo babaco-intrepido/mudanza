@@ -13,6 +13,8 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
+          {/* eslint-disable-next-line @next/next/no-title-in-document-head */}
+          <title>¡Nos mudamos!</title>
         </Head>
         <body>
           <Main />
