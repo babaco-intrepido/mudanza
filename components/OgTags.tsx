@@ -12,7 +12,7 @@ export interface OgTagsProps {
 
 // Produce algo como https://mudanza.vercel.app/_next/image?url=%2Fimages%2Farticulos%2Fbiblio2.jpg&w=750&q=75.
 // Ojo: solo va a funcionar si width y quality son generados por Next.
-// Ver https://nextjs.org/docs/api-reference/next/image para los valores por defecto.
+// Ver https://nextjs.org/docs/api-reference/next/image#device-sizes para los valores por defecto.
 function makeNextImagePath(path: string, width: number, quality: number) {
   return `_next/image?url=${encodeURIComponent(path)}&w=${width}&q=${quality}`;
 }
@@ -41,7 +41,7 @@ export default function OgTags({
 }: OgTagsProps) {
   const site = '¡Nos mudamos!';
   const imagePath = getImagePath(originalImageUrl);
-  const imageUrl = `${siteUrl}/${makeNextImagePath(imagePath, 750, 75)}`;
+  const imageUrl = `${siteUrl}/${makeNextImagePath(imagePath, 256, 75)}`;
 
   return (
     <Head>
