@@ -11,6 +11,7 @@ async function hydrate(articulo: Articulo, fileName: string) {
   articulo.id = fileName.replace(/\.md$/, '');
 
   const content = await remark().use(html).process(articulo.descripcion);
+  articulo.descripcionRaw = articulo.descripcion;
   articulo.descripcion = content.toString();
 
   return articulo;
@@ -53,6 +54,7 @@ export interface Articulo {
   titulo: string;
   cantidad: number;
   descripcion: string;
+  descripcionRaw: string;
   destino: Destino;
   categoria: string;
   precio: number;
