@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { isNil } from 'ramda';
 import placeholder from '../public/images/placeholder.png';
 
 export interface OgTagsProps {
@@ -16,6 +17,21 @@ function makeNextImagePath(path: string, width: number, quality: number) {
   return `_next/image?url=${encodeURIComponent(path)}&w=${width}&q=${quality}`;
 }
 
+export function getImagePath(originalImageUrl: string) {
+  if (isNil(originalImageUrl)) {
+    return placeholder.src;
+  }
+
+  if (originalImageUrl.startsWith('/')) {
+    return originalImageUrl;
+  }
+
+  const urlWithProtocol = originalImageUrl.startsWith('http')
+    ? originalImageUrl
+    : `http://${originalImageUrl}`;
+  return new URL(urlWithProtocol).pathname;
+}
+
 export default function OgTags({
   title,
   description,
@@ -24,8 +40,8 @@ export default function OgTags({
   path = '',
 }: OgTagsProps) {
   const site = '¡Nos mudamos!';
-  const imagePath = originalImageUrl?.replace(siteUrl, '') || placeholder.src;
-  const imageUrl = `${makeNextImagePath(imagePath, 750, 75)}`;
+  const imagePath = getImagePath(originalImageUrl);
+  const imageUrl = `${siteUrl}/${makeNextImagePath(imagePath, 750, 75)}`;
 
   return (
     <Head>
