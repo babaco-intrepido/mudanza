@@ -9,9 +9,11 @@ import Precio from '../../components/Precio';
 import { Button, Grid, useMediaQuery, useTheme } from '@mui/material';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Entrega from '../../components/articulos/Entrega';
+import OgTags from '../../components/OgTags';
 
 interface DetalleArticuloProps {
   articulo: Articulo;
+  siteUrl: string;
 }
 
 const nonNil = reject(isNil);
@@ -22,6 +24,7 @@ function makeWhatsAppLink(mensaje: string) {
 
 const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
   articulo,
+  siteUrl,
 }: DetalleArticuloProps) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -78,27 +81,36 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
   );
 
   return (
-    <Container maxWidth="lg">
-      {isMobile ? (
-        <Grid container direction="column">
-          {Titular}
-          {Imagenes}
-          {DescripcionBoton}
-        </Grid>
-      ) : (
-        <Grid container spacing={4}>
-          <Grid item md={6}>
+    <>
+      <OgTags
+        title={articulo.titulo}
+        description={articulo.descripcion}
+        imagePath={articulo.foto1}
+        siteUrl={siteUrl}
+        path={`articulos/${articulo.id}`}
+      />
+      <Container maxWidth="lg">
+        {isMobile ? (
+          <Grid container direction="column">
+            {Titular}
             {Imagenes}
+            {DescripcionBoton}
           </Grid>
-          <Grid item md={6}>
-            <Grid container direction="column">
-              {Titular}
-              {DescripcionBoton}
+        ) : (
+          <Grid container spacing={4}>
+            <Grid item md={6}>
+              {Imagenes}
+            </Grid>
+            <Grid item md={6}>
+              <Grid container direction="column">
+                {Titular}
+                {DescripcionBoton}
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
-      )}
-    </Container>
+        )}
+      </Container>
+    </>
   );
 };
 
@@ -117,6 +129,7 @@ export const getStaticProps: GetStaticProps<DetalleArticuloProps> = async ({
   return {
     props: {
       articulo,
+      siteUrl: process.env.NEXT_PUBLIC_VERCEL_URL || 'localhost:3000',
     },
   };
 };
