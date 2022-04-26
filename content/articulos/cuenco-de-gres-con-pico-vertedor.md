@@ -5,7 +5,7 @@ descripcion: |-
 
   Está diseñado para servir salsas directamente con su pico vertedor. Producto de [La materia encendida](https://www.instagram.com/lamateriaencendida/).
 cantidad: 1
-categoria: Vajilla
+categoria: Cocina
 destino: Vender
 precio: 1200
 entrega: 

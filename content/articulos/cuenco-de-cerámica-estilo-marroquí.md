@@ -2,7 +2,7 @@
 titulo: Cuenco de cerámica estilo marroquí
 descripcion: "**Diámetro** 16cm."
 cantidad: 1
-categoria: Vajilla
+categoria: Cocina
 destino: Vender
 precio: 800
 entrega: 

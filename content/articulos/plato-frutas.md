@@ -2,7 +2,7 @@
 titulo: Plato frutas
 descripcion: 
 cantidad: 1
-categoria: Vajilla
+categoria: Cocina
 destino: Regalar
 precio: 0
 entrega: 

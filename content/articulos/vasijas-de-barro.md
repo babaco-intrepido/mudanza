@@ -3,7 +3,7 @@ titulo: Vasijas de barro
 descripcion: "**Diámetro:** 15cm. \n\nCompradas en Bolivia. Ya están curads, se pueden
   meter al horno o microondas."
 cantidad: 6
-categoria: Vajilla
+categoria: Cocina
 destino: Vender
 precio: 300
 entrega: 

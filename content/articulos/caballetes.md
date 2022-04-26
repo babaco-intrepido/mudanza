@@ -3,8 +3,8 @@ titulo: Caballetes
 descripcion: 
 cantidad: 1
 categoria: Muebles
-destino: Vender
-precio: 
+destino: Regalar
+precio: 0
 entrega: 
 foto1: 
 foto2: 

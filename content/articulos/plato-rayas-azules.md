@@ -2,7 +2,7 @@
 titulo: Plato rayas azules
 descripcion: 
 cantidad: 1
-categoria: Vajilla
+categoria: Cocina
 destino: Regalar
 precio: 0
 entrega: 

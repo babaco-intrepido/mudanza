@@ -2,7 +2,7 @@
 titulo: Ensaladera de gres
 descripcion: "**Diámetro** 30cm, alto 15cm. Producto de [La materia encendida](https://www.instagram.com/lamateriaencendida/)."
 cantidad: 1
-categoria: Vajilla
+categoria: Cocina
 destino: Vender
 precio: 
 entrega: 

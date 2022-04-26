@@ -2,7 +2,7 @@
 titulo: Platos vidrio planos
 descripcion: "**Diámetro** 22cm."
 cantidad: 3
-categoria: Vajilla
+categoria: Cocina
 destino: Regalar
 precio: 0
 entrega: 

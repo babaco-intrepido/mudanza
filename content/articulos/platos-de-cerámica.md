@@ -2,7 +2,7 @@
 titulo: Platos de cerámica
 descripcion: "**Diámetro** 24cm."
 cantidad: 4
-categoria: Vajilla
+categoria: Cocina
 destino: Regalar
 precio: 0
 entrega: 

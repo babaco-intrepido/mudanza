@@ -4,7 +4,7 @@ descripcion: "**Diámetro** 50cm, alto 22cm, capacidad total 3 litros. \n\nCon t
   blanca o roja según disponibilidad. La etiqueta es pintura de pizarrón, se puede
   sacar."
 cantidad: 15
-categoria: 
+categoria: Cocina
 destino: Vender
 precio: 700
 entrega: 

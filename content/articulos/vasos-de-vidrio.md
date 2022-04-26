@@ -2,7 +2,7 @@
 titulo: Vasos de vidrio
 descripcion: 
 cantidad: 4
-categoria: Vajilla
+categoria: Cocina
 destino: Regalar
 precio: 0
 entrega: 

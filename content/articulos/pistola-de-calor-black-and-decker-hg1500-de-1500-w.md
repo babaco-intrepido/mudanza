@@ -9,7 +9,7 @@ cantidad: 1
 categoria: Herramientas
 destino: Vender
 precio: 4000
-entrega: Junio
+entrega: Julio
 foto1: 
 foto2: 
 foto3: 

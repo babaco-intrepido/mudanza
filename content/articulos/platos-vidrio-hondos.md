@@ -2,7 +2,7 @@
 titulo: Platos vidrio hondos
 descripcion: "**Diámetro** 20cm."
 cantidad: 4
-categoria: Vajilla
+categoria: Cocina
 destino: Regalar
 precio: 0
 entrega: 

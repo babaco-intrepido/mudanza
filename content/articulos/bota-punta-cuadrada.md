@@ -1,11 +1,14 @@
 ---
 titulo: Bota punta cuadrada
-descripcion: 
+descripcion: |-
+  Talle 35.
+
+  Producto de [Pálida Keraná](https://www.instagram.com/palida_kerana/).
 cantidad: 1
 categoria: Calzado
 destino: Vender
-precio: 
+precio: 3000
 entrega: 
-foto1: 
+foto1: "/images/articulos/borcegocuadrada1.jpg"
 foto2: 
 foto3: 

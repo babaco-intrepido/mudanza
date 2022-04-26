@@ -9,6 +9,6 @@ categoria: Muebles
 destino: Vender
 precio: 4000
 entrega: 
-foto1: 
-foto2: 
-foto3: 
+foto1: "/images/articulos/sillonbici1.jpg"
+foto2: "/images/articulos/sillonbici2.jpg"
+foto3: "/images/articulos/sillonbici3.jpg"
