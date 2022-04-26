@@ -82,7 +82,7 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
         href={linkWhatsApp}
         fullWidth
       >
-        ¡Lo quiero!
+        ¡Messirve!
       </Button>
     </>
   );
