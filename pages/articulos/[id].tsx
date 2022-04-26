@@ -43,9 +43,11 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
       <Typography variant="h5" gutterBottom>
         {articulo.titulo}
       </Typography>
-      <Typography variant="h4" gutterBottom>
-        <Precio importe={articulo.precio} />
-      </Typography>
+      {articulo.destino === 'Vender' && (
+        <Typography variant="h4" gutterBottom>
+          <Precio importe={articulo.precio} />
+        </Typography>
+      )}
       <Grid mb={2}>
         <Entrega articulo={articulo} size="medium" />
       </Grid>
