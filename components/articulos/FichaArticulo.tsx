@@ -38,6 +38,11 @@ export default function FichaArticulo({
                 <Precio importe={articulo.precio} />
               </Typography>
             )}
+            {articulo.cantidad > 1 && (
+              <Typography variant="body2" color="success.main" paragraph>
+                {articulo.cantidad} unidades disponibles
+              </Typography>
+            )}
             <Entrega articulo={articulo} size="small" />
           </CardContent>
         </Grid>

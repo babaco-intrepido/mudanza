@@ -48,6 +48,11 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
           <Precio importe={articulo.precio} />
         </Typography>
       )}
+      {articulo.cantidad > 1 && (
+        <Typography variant="body1" color="success.main" paragraph>
+          {articulo.cantidad} unidades disponibles
+        </Typography>
+      )}
       <Grid mb={2}>
         <Entrega articulo={articulo} size="medium" />
       </Grid>
