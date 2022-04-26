@@ -87,7 +87,7 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
       <OgTags
         title={articulo.titulo}
         description={articulo.descripcionRaw}
-        imagePath={articulo.foto1}
+        originalImageUrl={articulo.foto1}
         siteUrl={siteUrl}
         path={`articulos/${articulo.id}`}
       />
