@@ -40,7 +40,7 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
   const Titular = (
     <>
       {' '}
-      <Typography variant="h5" gutterBottom>
+      <Typography variant="h3" gutterBottom>
         {articulo.titulo}
       </Typography>
       {articulo.destino === 'Vender' && (

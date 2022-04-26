@@ -17,7 +17,7 @@ const Index: NextPage = () => {
       >
         ¡Nos vamos de viaje!
       </Typography>
-      <Typography variant="h5" align="center" color="text.secondary" paragraph>
+      <Typography variant="h3" align="center" color="text.secondary">
         Y queremos circular todo lo que nos quedó. Algunas cosas están a la
         venta y otras las regalamos.
       </Typography>

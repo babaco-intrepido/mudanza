@@ -30,11 +30,11 @@ export default function FichaArticulo({
         </Grid>
         <Grid item xs={8} flexDirection="column">
           <CardContent>
-            <Typography gutterBottom variant="subtitle2">
+            <Typography gutterBottom variant="subtitle1">
               {articulo.titulo}
             </Typography>
             {mostrarPrecio && (
-              <Typography gutterBottom variant="subtitle1">
+              <Typography gutterBottom variant="h6">
                 <Precio importe={articulo.precio} />
               </Typography>
             )}
