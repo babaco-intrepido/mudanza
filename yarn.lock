@@ -6609,6 +6609,11 @@ remark-html@^15.0.1:
     mdast-util-to-hast "^12.0.0"
     unified "^10.0.0"
 
+remark-mdx-to-plain-text@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/remark-mdx-to-plain-text/-/remark-mdx-to-plain-text-3.0.0.tgz#b8bd91bdf0f2b4318c8fb524c6abfa2f95500f30"
+  integrity sha512-waIWwHEhuC/wuHf4vy26qQvKgJfNzSk3gqKjC71HkO7MAX9/4uBAPxAwW3euZkyRkyJDhSDT/dkTAPDcaS8RpQ==
+
 remark-parse@^10.0.0:
   version "10.0.1"
   resolved "https://registry.npmjs.org/remark-parse/-/remark-parse-10.0.1.tgz"

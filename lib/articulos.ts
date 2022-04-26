@@ -3,16 +3,25 @@ import matter from 'gray-matter';
 import path from 'path';
 import { remark } from 'remark';
 import html from 'remark-html';
+// @ts-ignore
+import plainText from 'remark-mdx-to-plain-text';
+
 import { find, whereEq, map, prop, compose, uniq, isNil, filter } from 'ramda';
 
 const articulosDirectory = path.join(process.cwd(), 'content/articulos');
 
+async function remarkProcessWith(plugin: any, content: string) {
+  const result = await remark().use(plugin).process(content);
+  return result.toString();
+}
+
 async function hydrate(articulo: Articulo, fileName: string) {
   articulo.id = fileName.replace(/\.md$/, '');
-
-  const content = await remark().use(html).process(articulo.descripcion);
-  articulo.descripcionRaw = articulo.descripcion;
-  articulo.descripcion = content.toString();
+  articulo.descripcionPlain = await remarkProcessWith(
+    plainText,
+    articulo.descripcion
+  );
+  articulo.descripcion = await remarkProcessWith(html, articulo.descripcion);
 
   return articulo;
 }
@@ -54,7 +63,7 @@ export interface Articulo {
   titulo: string;
   cantidad: number;
   descripcion: string;
-  descripcionRaw: string;
+  descripcionPlain: string;
   destino: Destino;
   categoria: string;
   precio: number;
