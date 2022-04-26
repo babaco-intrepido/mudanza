@@ -19,7 +19,7 @@ interface DetalleArticuloProps {
 const nonNil = reject(isNil);
 
 function makeWhatsAppLink(mensaje: string) {
-  return `https://wa.me/541168340304?text=${encodeURIComponent(mensaje)}`;
+  return `https://wa.me/541131768003?text=${encodeURIComponent(mensaje)}`;
 }
 
 const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
@@ -32,9 +32,9 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
   const linkWhatsApp = React.useMemo(
     () =>
       makeWhatsAppLink(
-        `¡Hola! 👋\nEstoy viendo el sitio de la mudanza y me gustaría comprar *${articulo.titulo}*.`
+        `¡Hola! 👋\nEstoy viendo el sitio de la mudanza y me gustaría comprar *${articulo.titulo}*.\n${siteUrl}/articulos/${articulo.id}`
       ),
-    [articulo]
+    [articulo, siteUrl]
   );
 
   const Titular = (
