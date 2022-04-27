@@ -37,29 +37,36 @@ export default function ListadoArticulos({
     [articulos, categoriaSeleccionada]
   );
 
-  const seleccionarCategoria = (seleccionada: string) => {
-    setCategoriaSeleccionada(seleccionada);
-    setCategoriasVisibles((actual) => {
-      const [seleccionadas, resto] = partition(
-        (it) => it.label === seleccionada,
-        actual
-      );
-      seleccionadas.forEach((it) => {
-        it.enabled = true;
+  const seleccionarCategoria = React.useCallback(
+    (seleccionada: string, actualizarQuery = true) => {
+      setCategoriaSeleccionada(seleccionada);
+      setCategoriasVisibles((actual) => {
+        const [seleccionadas, resto] = partition(
+          (it) => it.label === seleccionada,
+          actual
+        );
+        seleccionadas.forEach((it) => {
+          it.enabled = true;
+        });
+        resto.forEach((it) => {
+          it.enabled = false;
+        });
+        return actual;
       });
-      resto.forEach((it) => {
-        it.enabled = false;
-      });
-      return actual;
-    });
-  };
+
+      if (actualizarQuery) {
+        router.replace({ query: { categoria: seleccionada } });
+      }
+    },
+    [router]
+  );
 
   React.useEffect(() => {
     const { categoria } = router.query;
     if (!isNil(categoria)) {
-      seleccionarCategoria(categoria as string);
+      seleccionarCategoria(categoria as string, false);
     }
-  }, [router.query, router.isReady]);
+  }, [router.query, router.isReady, seleccionarCategoria]);
 
   return (
     <>
