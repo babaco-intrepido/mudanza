@@ -6,7 +6,7 @@ descripcion: "**Diámetro** 50cm, alto 22cm, capacidad total 3 litros. \n\nCon t
 cantidad: 15
 categoria: Cocina
 destino: Vender
-precio: 700
+precio: 500
 entrega: 
 foto1: "/images/articulos/frascog1.jpg"
 foto2: 

@@ -7,7 +7,7 @@ descripcion: |-
 cantidad: 1
 categoria: Muebles
 destino: Vender
-precio: 4000
+precio: 2000
 entrega: 
 foto1: "/images/articulos/sillonbici1.jpg"
 foto2: "/images/articulos/sillonbici2.jpg"

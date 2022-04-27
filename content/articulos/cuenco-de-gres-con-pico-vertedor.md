@@ -7,7 +7,7 @@ descripcion: |-
 cantidad: 1
 categoria: Cocina
 destino: Vender
-precio: 1200
+precio: 800
 entrega: 
 foto1: "/images/articulos/pico1.jpg"
 foto2: "/images/articulos/pico2.jpg"

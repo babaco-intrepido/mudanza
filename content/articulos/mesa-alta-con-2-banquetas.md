@@ -7,7 +7,7 @@ descripcion: |-
 cantidad: 1
 categoria: Muebles
 destino: Vender
-precio: 8000
+precio: 6000
 entrega: 
 foto1: "/images/articulos/mesada1.jpg"
 foto2: 

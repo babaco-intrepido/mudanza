@@ -4,7 +4,7 @@ descripcion: 'Mesa: 80cm ancho x 140cm largo.'
 cantidad: 1
 categoria: Muebles
 destino: Vender
-precio: 10000
+precio: 8000
 entrega: 
 foto1: "/images/articulos/mesa1.jpg"
 foto2: "/images/articulos/mesa2.jpg"

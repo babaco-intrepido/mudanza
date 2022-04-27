@@ -6,7 +6,7 @@ descripcion: "**Medidas:** diámetro 20'' (50cm), altura regulable hasta 1.70m. 
 cantidad: 1
 categoria: Electrodomésticos
 destino: Vender
-precio: 8000
+precio: 7000
 entrega: 
 foto1: "/images/articulos/bonn1.jpg"
 foto2: "/images/articulos/bonn2.jpg"

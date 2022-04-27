@@ -5,7 +5,7 @@ descripcion: Capacidad de lavado hasta 7 kilos y su potencia de centrifugado de 
 cantidad: 1
 categoria: Electrodomésticos
 destino: Vender
-precio: 50000
+precio: 35000
 entrega: 
 foto1: "/images/articulos/lavarropa1.jpg"
 foto2: "/images/articulos/lavarropa2.jpg"
