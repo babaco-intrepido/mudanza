@@ -4,7 +4,8 @@ import Typography from '@mui/material/Typography';
 import { Articulo } from '../../lib/articulos';
 import FichaArticulo from './FichaArticulo';
 import SelectorCategorias, { ChipData } from './SelectorCategorias';
-import { partition } from 'ramda';
+import { isNil, partition } from 'ramda';
+import { useRouter } from 'next/router';
 
 export interface ListadoArticulosProps {
   articulos: Articulo[];
@@ -19,8 +20,10 @@ export default function ListadoArticulos({
   subtitulo,
   mostrarPrecio = true,
 }: ListadoArticulosProps) {
+  const router = useRouter();
+
   const [categoriasVisibles, setCategoriasVisibles] = React.useState(
-    categoriasDisponibles.map((label, key) => ({ key, label, enabled: true }))
+    categoriasDisponibles.map((label) => ({ label, enabled: true }))
   );
 
   const [categoriaSeleccionada, setCategoriaSeleccionada] =
@@ -34,11 +37,11 @@ export default function ListadoArticulos({
     [articulos, categoriaSeleccionada]
   );
 
-  const handleDelete = (chipToDelete: ChipData) => {
-    setCategoriaSeleccionada(chipToDelete.label);
+  const seleccionarCategoria = (seleccionada: string) => {
+    setCategoriaSeleccionada(seleccionada);
     setCategoriasVisibles((actual) => {
       const [seleccionadas, resto] = partition(
-        (it) => it.key === chipToDelete.key,
+        (it) => it.label === seleccionada,
         actual
       );
       seleccionadas.forEach((it) => {
@@ -50,6 +53,13 @@ export default function ListadoArticulos({
       return actual;
     });
   };
+
+  React.useEffect(() => {
+    const { categoria } = router.query;
+    if (!isNil(categoria)) {
+      seleccionarCategoria(categoria as string);
+    }
+  }, [router.query, router.isReady]);
 
   return (
     <>
@@ -65,7 +75,7 @@ export default function ListadoArticulos({
       <Grid mb={5}>
         <SelectorCategorias
           categorias={categoriasVisibles}
-          onItemDelete={handleDelete}
+          onSelect={seleccionarCategoria}
         />
       </Grid>
       <Grid container spacing={4}>

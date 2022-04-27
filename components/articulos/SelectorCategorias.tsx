@@ -6,14 +6,13 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 export interface ChipData {
-  key: number;
   label: string;
   enabled: boolean;
 }
 
 interface SelectorCategoriasProps {
   categorias: ChipData[];
-  onItemDelete(item: ChipData): void;
+  onSelect(item: string): void;
 }
 
 const ListItem = styled('li')(({ theme }) => ({
@@ -22,7 +21,7 @@ const ListItem = styled('li')(({ theme }) => ({
 
 export default function SelectorCategorias({
   categorias,
-  onItemDelete,
+  onSelect,
 }: SelectorCategoriasProps) {
   return (
     <Paper
@@ -37,14 +36,14 @@ export default function SelectorCategorias({
       }}
       component="ul"
     >
-      {categorias.map((data) => {
+      {categorias.map((data, index) => {
         return (
-          <ListItem key={data.key}>
+          <ListItem key={index}>
             <Chip
               color={data.enabled ? 'primary' : 'default'}
               label={data.label}
               icon={data.enabled ? <VisibilityIcon /> : <VisibilityOffIcon />}
-              onClick={() => onItemDelete(data)}
+              onClick={() => onSelect(data.label)}
             />
           </ListItem>
         );
