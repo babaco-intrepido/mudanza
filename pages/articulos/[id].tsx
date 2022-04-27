@@ -37,6 +37,8 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
     [articulo, siteUrl]
   );
 
+  const hayMasDeUno = React.useMemo(() => articulo.cantidad > 1, [articulo]);
+
   const Titular = (
     <>
       {' '}
@@ -46,9 +48,14 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
       {articulo.destino === 'Vender' && (
         <Typography variant="h4" gutterBottom>
           <Precio importe={articulo.precio} />
+          {hayMasDeUno && (
+            <Typography ml={1} variant="subtitle1" component="span">
+              por unidad
+            </Typography>
+          )}
         </Typography>
       )}
-      {articulo.cantidad > 1 && (
+      {hayMasDeUno && (
         <Typography variant="body1" color="success.main" paragraph>
           {articulo.cantidad} unidades disponibles
         </Typography>
