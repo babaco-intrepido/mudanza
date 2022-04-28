@@ -1,9 +1,5 @@
-import { Chip, ChipProps, Grid, styled } from '@mui/material';
 import { Articulo } from '../../lib/articulos';
-
-const RectangularChip = styled(Chip)<ChipProps>(() => ({
-  borderRadius: 5,
-}));
+import { RectangularChip } from '../common/MuiOverrides';
 
 export interface EntregaProps {
   articulo: Articulo;

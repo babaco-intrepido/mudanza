@@ -7,6 +7,8 @@ import ImageOrPlaceholder from '../ImageOrPlaceholder';
 import Precio from '../Precio';
 import { Grid } from '@mui/material';
 import Entrega from './Entrega';
+import { RectangularChip } from '../common/MuiOverrides';
+import { Case, Switch } from 'react-if';
 
 export interface FichaArticuloProps {
   articulo: Articulo;
@@ -33,11 +35,22 @@ export default function FichaArticulo({
             <Typography gutterBottom variant="subtitle1">
               {articulo.titulo}
             </Typography>
-            {mostrarPrecio && (
-              <Typography gutterBottom variant="h6">
-                <Precio importe={articulo.precio} />
-              </Typography>
-            )}
+            <Switch>
+              <Case condition={articulo.reservado}>
+                <RectangularChip
+                  sx={{ mb: 0.5 }}
+                  size="small"
+                  label="Reservado"
+                  color="error"
+                />
+              </Case>
+              <Case condition={mostrarPrecio}>
+                <Typography gutterBottom variant="h6">
+                  <Precio importe={articulo.precio} />
+                </Typography>
+              </Case>
+            </Switch>
+
             {articulo.cantidad > 1 && (
               <Typography variant="body2" color="success.main" paragraph>
                 {articulo.cantidad} unidades disponibles

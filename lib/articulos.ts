@@ -68,6 +68,7 @@ export interface Articulo {
   categoria: string;
   precio: number;
   entrega?: string;
+  reservado: boolean;
   foto1: string;
   foto2: string;
   foto3: string;

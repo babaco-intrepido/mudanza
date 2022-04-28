@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import { Articulo } from '../../lib/articulos';
 import FichaArticulo from './FichaArticulo';
 import SelectorCategorias, { ChipData } from './SelectorCategorias';
-import { isNil, partition } from 'ramda';
+import { isNil, partition, sortBy } from 'ramda';
 import { useRouter } from 'next/router';
 
 export interface ListadoArticulosProps {
@@ -12,6 +12,10 @@ export interface ListadoArticulosProps {
   categoriasDisponibles: string[];
   subtitulo: string;
   mostrarPrecio?: boolean;
+}
+
+function sortByReservado(articulos: Articulo[]): Articulo[] {
+  return sortBy((it) => (it.reservado ? 1 : 0), articulos);
 }
 
 export default function ListadoArticulos({
@@ -31,9 +35,11 @@ export default function ListadoArticulos({
 
   const articulosVisibles = React.useMemo(
     () =>
-      categoriaSeleccionada
-        ? articulos.filter((it) => it.categoria === categoriaSeleccionada)
-        : articulos,
+      sortByReservado(
+        categoriaSeleccionada
+          ? articulos.filter((it) => it.categoria === categoriaSeleccionada)
+          : articulos
+      ),
     [articulos, categoriaSeleccionada]
   );
 
