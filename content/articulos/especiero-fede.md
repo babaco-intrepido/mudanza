@@ -1,6 +1,9 @@
 ---
 titulo: Especiero Fede
-descripcion: 
+descripcion: |-
+  **Medidas:** 60cm ancho, 100cm alto.
+
+  Realizado con madera reciclada.
 cantidad: 1
 categoria: Muebles
 destino: Regalar
