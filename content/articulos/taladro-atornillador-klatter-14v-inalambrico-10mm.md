@@ -10,6 +10,6 @@ categoria: Herramientas
 destino: Vender
 precio: 5000
 entrega: Julio
-foto1: 
-foto2: 
-foto3: 
+foto1: "/images/articulos/klatter1.jpg"
+foto2: "/images/articulos/klatter2.jpg"
+foto3: "/images/articulos/klatter3.jpg"
