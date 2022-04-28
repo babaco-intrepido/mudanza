@@ -12,3 +12,4 @@ entrega:
 foto1: "/images/articulos/mesada1.jpg"
 foto2: 
 foto3: 
+reservado: false

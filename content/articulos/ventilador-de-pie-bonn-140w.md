@@ -11,3 +11,4 @@ entrega:
 foto1: "/images/articulos/bonn1.jpg"
 foto2: "/images/articulos/bonn2.jpg"
 foto3: 
+reservado: false

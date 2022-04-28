@@ -12,3 +12,4 @@ entrega: Julio
 foto1: "/images/articulos/sommier1.jpg"
 foto2: "/images/articulos/sommier2.jpg"
 foto3: 
+reservado: false

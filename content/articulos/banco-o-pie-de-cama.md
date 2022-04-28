@@ -12,3 +12,4 @@ entrega:
 foto1: "/images/articulos/sillonbici1.jpg"
 foto2: "/images/articulos/sillonbici2.jpg"
 foto3: "/images/articulos/sillonbici3.jpg"
+reservado: false

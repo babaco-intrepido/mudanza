@@ -9,3 +9,4 @@ entrega:
 foto1: "/images/articulos/ensaladera1.jpg"
 foto2: "/images/articulos/ensaladera2.jpg"
 foto3: 
+reservado: false

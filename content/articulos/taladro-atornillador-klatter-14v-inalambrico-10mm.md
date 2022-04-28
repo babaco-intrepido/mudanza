@@ -13,3 +13,4 @@ entrega: Julio
 foto1: "/images/articulos/klatter1.jpg"
 foto2: "/images/articulos/klatter2.jpg"
 foto3: "/images/articulos/klatter3.jpg"
+reservado: false

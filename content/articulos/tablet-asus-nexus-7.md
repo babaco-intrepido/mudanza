@@ -10,3 +10,4 @@ entrega:
 foto1: "/images/articulos/tablet1.jpg"
 foto2: "/images/articulos/tablet2.jpg"
 foto3: "/images/articulos/tablet3.jpg"
+reservado: false

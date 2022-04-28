@@ -12,3 +12,4 @@ entrega: Junio
 foto1: "/images/articulos/chakana1.jpg"
 foto2: "/images/articulos/chakana2.jpg"
 foto3: 
+reservado: true

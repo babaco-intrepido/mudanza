@@ -9,3 +9,4 @@ entrega:
 foto1: "/images/articulos/cerealero1.jpg"
 foto2: "/images/articulos/cerealero2.jpg"
 foto3: 
+reservado: false

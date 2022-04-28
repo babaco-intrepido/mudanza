@@ -12,3 +12,4 @@ entrega:
 foto1: 
 foto2: 
 foto3: 
+reservado: false

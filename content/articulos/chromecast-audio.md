@@ -12,3 +12,4 @@ entrega:
 foto1: "/images/articulos/chromaudio1.jpg"
 foto2: "/images/articulos/chromaudio2.jpg"
 foto3: 
+reservado: false

@@ -12,3 +12,4 @@ entrega:
 foto1: "/images/articulos/borcegocuadrada1.jpg"
 foto2: 
 foto3: 
+reservado: false

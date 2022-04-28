@@ -16,3 +16,4 @@ entrega: Julio
 foto1: "/images/articulos/remachadora1.jpg"
 foto2: "/images/articulos/remachadora2.jpg"
 foto3: "/images/articulos/remachadora3.jpg"
+reservado: false

@@ -14,3 +14,4 @@ entrega: Julio
 foto1: "/images/articulos/circular1.jpg"
 foto2: "/images/articulos/circular2.jpg"
 foto3: "/images/articulos/circular3.jpg"
+reservado: false

@@ -9,3 +9,4 @@ entrega:
 foto1: "/images/articulos/celeste1.jpg"
 foto2: "/images/articulos/celeste2.jpg"
 foto3: 
+reservado: false

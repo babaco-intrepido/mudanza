@@ -9,3 +9,4 @@ entrega:
 foto1: "/images/articulos/bowl1.jpg"
 foto2: "/images/articulos/bowl2.jpg"
 foto3: 
+reservado: false

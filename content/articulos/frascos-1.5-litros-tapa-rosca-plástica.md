@@ -11,3 +11,4 @@ entrega: Junio
 foto1: "/images/articulos/frascoc1.jpg"
 foto2: 
 foto3: 
+reservado: false

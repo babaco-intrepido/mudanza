@@ -12,3 +12,4 @@ entrega:
 foto1: "/images/articulos/pico1.jpg"
 foto2: "/images/articulos/pico2.jpg"
 foto3: 
+reservado: false

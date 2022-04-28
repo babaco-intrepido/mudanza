@@ -9,3 +9,4 @@ entrega:
 foto1: "/images/articulos/gaucho1.jpg"
 foto2: "/images/articulos/gaucho2.jpg"
 foto3: 
+reservado: false

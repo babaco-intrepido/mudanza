@@ -14,3 +14,4 @@ entrega: Julio
 foto1: "/images/articulos/lijadora1.jpg"
 foto2: "/images/articulos/lijadora2.jpg"
 foto3: "/images/articulos/lijadora3.jpg"
+reservado: false

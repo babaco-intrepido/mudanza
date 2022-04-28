@@ -12,3 +12,4 @@ entrega: Junio
 foto1: "/images/articulos/puf1.jpg"
 foto2: 
 foto3: 
+reservado: true

@@ -10,3 +10,4 @@ entrega:
 foto1: "/images/articulos/barro1.jpg"
 foto2: "/images/articulos/barro2.jpg"
 foto3: 
+reservado: false

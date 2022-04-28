@@ -12,3 +12,4 @@ entrega: Junio
 foto1: "/images/articulos/lamparasal1.jpg"
 foto2: "/images/articulos/lamparasal2.jpg"
 foto3: 
+reservado: false

@@ -9,3 +9,4 @@ entrega:
 foto1: "/images/articulos/borcegosnegros1.jpg"
 foto2: 
 foto3: 
+reservado: false

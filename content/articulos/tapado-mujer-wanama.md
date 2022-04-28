@@ -9,3 +9,4 @@ entrega:
 foto1: "/images/articulos/tapado1.jpg"
 foto2: "/images/articulos/tapado2.jpg"
 foto3: "/images/articulos/tapado3.jpg"
+reservado: false

@@ -9,3 +9,4 @@ entrega: Junio
 foto1: "/images/articulos/mesa1.jpg"
 foto2: "/images/articulos/mesa2.jpg"
 foto3: 
+reservado: true

@@ -35,7 +35,8 @@ def to_articulo(item)
     'entrega' => item['¿Cuándo se entrega?'],
     'foto1' => nombre_foto(item, 1),
     'foto2' => nombre_foto(item, 2),
-    'foto3' => nombre_foto(item, 3)
+    'foto3' => nombre_foto(item, 3),
+    'reservado' => item['Estado'] == 'Reservado'
   }
 end
 
@@ -55,7 +56,6 @@ articulos =
   inventario
     .reject { |it| it['Destino'].nil? }
     .select { |it| it['Destino'].include?('Vender') || it['Destino'].include?('Regalar') }
-    .select { |it| it['¿A quién?'].nil? }
     .select { |it| it['Estado'] != 'Vendido' }
     .map(&method(:to_articulo))
 
