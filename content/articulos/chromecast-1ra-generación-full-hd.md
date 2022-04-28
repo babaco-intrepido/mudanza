@@ -10,4 +10,4 @@ entrega: Junio
 foto1: "/images/articulos/chromecast1.jpg"
 foto2: "/images/articulos/chromecast2.jpg"
 foto3: 
-reservado: false
+reservado: true

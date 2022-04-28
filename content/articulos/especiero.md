@@ -12,4 +12,4 @@ entrega:
 foto1: "/images/articulos/especierofede1.jpg"
 foto2: 
 foto3: 
-reservado: false
+reservado: true
