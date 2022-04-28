@@ -1,10 +1,13 @@
 ---
 titulo: Banqueta aguayo
-descripcion: "**Diámetro** 110cm, alto 43cm."
+descripcion: |-
+  **Medidas:** diámetro 110cm, alto 43cm.
+
+  Ambos tienen una pequeña mancha arriba, ver fotos.
 cantidad: 2
 categoria: Muebles
-destino: Regalar
-precio: 0
+destino: Vender
+precio: 1000
 entrega: 
 foto1: "/images/articulos/puf1.jpg"
 foto2: 

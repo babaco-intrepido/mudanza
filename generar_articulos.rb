@@ -53,7 +53,9 @@ inventario = CSV.read(archivo, headers: true).map(&:to_h)
 
 articulos = 
   inventario
+    .reject { |it| it['Destino'].nil? }
     .select { |it| it['Destino'].include?('Vender') || it['Destino'].include?('Regalar') }
+    .select { |it| it['¿A quién?'].nil? }
     .select { |it| it['Estado'] != 'Vendido' }
     .map(&method(:to_articulo))
 
