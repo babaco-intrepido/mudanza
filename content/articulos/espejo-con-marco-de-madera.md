@@ -7,7 +7,7 @@ descripcion: |-
 cantidad: 1
 categoria: Muebles
 destino: Vender
-precio: 5000
+precio: 3000
 entrega: Julio
 foto1: "/images/articulos/espejo1.jpg"
 foto2: "/images/articulos/espejo2.jpg"

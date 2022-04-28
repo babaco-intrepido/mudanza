@@ -10,4 +10,4 @@ entrega: Julio
 foto1: "/images/articulos/escurridor1.jpg"
 foto2: "/images/articulos/escurridor2.jpg"
 foto3: "/images/articulos/escurridor3.jpg"
-reservado: false
+reservado: true
