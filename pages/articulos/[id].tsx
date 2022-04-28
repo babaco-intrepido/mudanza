@@ -10,6 +10,7 @@ import { Button, Grid, useMediaQuery, useTheme } from '@mui/material';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Entrega from '../../components/articulos/Entrega';
 import OgTags from '../../components/OgTags';
+import Head from 'next/head';
 
 interface DetalleArticuloProps {
   articulo: Articulo;
@@ -77,6 +78,9 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
 
   const DescripcionBoton = (
     <>
+      <Head>
+        <title>{articulo.titulo}</title>
+      </Head>
       <div
         className="remark"
         dangerouslySetInnerHTML={{

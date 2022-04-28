@@ -2,6 +2,7 @@ import * as React from 'react';
 import { GetStaticProps, NextPage } from 'next';
 import { todos, Articulo, categorias } from '../lib/articulos';
 import ListadoArticulos from '../components/articulos/ListadoArticulos';
+import Head from 'next/head';
 
 export interface VentaProps {
   articulos: Articulo[];
@@ -10,11 +11,16 @@ export interface VentaProps {
 
 const Venta: NextPage<VentaProps> = ({ articulos, categoriasDisponibles }) => {
   return (
-    <ListadoArticulos
-      articulos={articulos}
-      categoriasDisponibles={categoriasDisponibles}
-      subtitulo="a la venta"
-    />
+    <>
+      <Head>
+        <title>A la venta | ¡Nos mudamos!</title>
+      </Head>
+      <ListadoArticulos
+        articulos={articulos}
+        categoriasDisponibles={categoriasDisponibles}
+        subtitulo="a la venta"
+      />
+    </>
   );
 };
 

@@ -4,10 +4,14 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { NextPage } from 'next';
 import Link from '../components/Link';
+import Head from 'next/head';
 
 const Index: NextPage = () => {
   return (
     <>
+      <Head>
+        <title>¡Nos mudamos!</title>
+      </Head>
       <Typography
         component="h1"
         variant="h2"

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { GetStaticProps, NextPage } from 'next';
 import { todos, Articulo, categorias } from '../lib/articulos';
 import ListadoArticulos from '../components/articulos/ListadoArticulos';
+import Head from 'next/head';
 
 export interface RegaloProps {
   articulos: Articulo[];
@@ -10,12 +11,17 @@ export interface RegaloProps {
 
 const Venta: NextPage<RegaloProps> = ({ articulos, categoriasDisponibles }) => {
   return (
-    <ListadoArticulos
-      articulos={articulos}
-      categoriasDisponibles={categoriasDisponibles}
-      subtitulo="para regalar"
-      mostrarPrecio={false}
-    />
+    <>
+      <Head>
+        <title>De regalo | ¡Nos mudamos!</title>
+      </Head>
+      <ListadoArticulos
+        articulos={articulos}
+        categoriasDisponibles={categoriasDisponibles}
+        subtitulo="para regalar"
+        mostrarPrecio={false}
+      />
+    </>
   );
 };
 
