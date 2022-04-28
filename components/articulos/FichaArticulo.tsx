@@ -19,47 +19,53 @@ export default function FichaArticulo({
   articulo,
   mostrarPrecio,
 }: FichaArticuloProps) {
-  return (
-    <Link href={`/articulos/${articulo.id}`} underline="none">
-      <Card sx={{ display: 'flex' }}>
-        <Grid item xs={4}>
-          <ImageOrPlaceholder
-            src={articulo.foto1}
-            alt="Foto"
-            width={200}
-            height={200}
-          />
-        </Grid>
-        <Grid item xs={8} flexDirection="column">
-          <CardContent>
-            <Typography gutterBottom variant="subtitle1">
-              {articulo.titulo}
-            </Typography>
-            <Switch>
-              <Case condition={articulo.reservado}>
-                <RectangularChip
-                  sx={{ mb: 0.5 }}
-                  size="small"
-                  label="Reservado"
-                  color="error"
-                />
-              </Case>
-              <Case condition={mostrarPrecio}>
-                <Typography gutterBottom variant="h6">
-                  <Precio importe={articulo.precio} />
-                </Typography>
-              </Case>
-            </Switch>
-
-            {articulo.cantidad > 1 && (
-              <Typography variant="body2" color="success.main" paragraph>
-                {articulo.cantidad} unidades disponibles
+  const Contenido = (
+    <Card sx={{ display: 'flex' }}>
+      <Grid item xs={4}>
+        <ImageOrPlaceholder
+          src={articulo.foto1}
+          alt="Foto"
+          width={200}
+          height={200}
+        />
+      </Grid>
+      <Grid item xs={8} flexDirection="column">
+        <CardContent>
+          <Typography gutterBottom variant="subtitle1">
+            {articulo.titulo}
+          </Typography>
+          <Switch>
+            <Case condition={articulo.reservado}>
+              <RectangularChip
+                sx={{ mb: 0.5 }}
+                size="small"
+                label="Reservado"
+                color="error"
+              />
+            </Case>
+            <Case condition={mostrarPrecio}>
+              <Typography gutterBottom variant="h6">
+                <Precio importe={articulo.precio} />
               </Typography>
-            )}
-            <Entrega articulo={articulo} size="small" />
-          </CardContent>
-        </Grid>
-      </Card>
+            </Case>
+          </Switch>
+
+          {articulo.cantidad > 1 && (
+            <Typography variant="body2" color="success.main" paragraph>
+              {articulo.cantidad} unidades disponibles
+            </Typography>
+          )}
+          <Entrega articulo={articulo} size="small" />
+        </CardContent>
+      </Grid>
+    </Card>
+  );
+
+  return articulo.reservado ? (
+    Contenido
+  ) : (
+    <Link href={`/articulos/${articulo.id}`} underline="none">
+      {Contenido}
     </Link>
   );
 }
