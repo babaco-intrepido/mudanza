@@ -1,5 +1,5 @@
 ---
-titulo: Especiero Fede
+titulo: Especiero
 descripcion: |-
   **Medidas:** 60cm ancho, 100cm alto.
 

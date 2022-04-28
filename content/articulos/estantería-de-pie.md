@@ -1,5 +1,5 @@
 ---
-titulo: Especiero Andre
+titulo: Estantería de pie
 descripcion: |-
   **Medidas:** 64cm ancho, 77cm alto.
 

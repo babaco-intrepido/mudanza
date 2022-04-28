@@ -6,7 +6,7 @@ cantidad: 1
 categoria: Electrodomésticos
 destino: Vender
 precio: 35000
-entrega: 
+entrega: Junio
 foto1: "/images/articulos/lavarropa1.jpg"
 foto2: "/images/articulos/lavarropa2.jpg"
 foto3: 

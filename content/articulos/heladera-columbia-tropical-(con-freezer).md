@@ -6,7 +6,7 @@ cantidad: 1
 categoria: Electrodomésticos
 destino: Vender
 precio: 25000
-entrega: 
+entrega: Junio
 foto1: "/images/articulos/heladera1.jpg"
 foto2: "/images/articulos/heladera2.jpg"
 foto3: "/images/articulos/heladera3.jpg"

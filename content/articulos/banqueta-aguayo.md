@@ -7,8 +7,8 @@ descripcion: |-
 cantidad: 2
 categoria: Muebles
 destino: Vender
-precio: 1000
-entrega: 
+precio: 700
+entrega: Junio
 foto1: "/images/articulos/puf1.jpg"
 foto2: 
 foto3: 

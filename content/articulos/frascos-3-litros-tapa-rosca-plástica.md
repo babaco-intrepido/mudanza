@@ -7,7 +7,7 @@ cantidad: 15
 categoria: Cocina
 destino: Vender
 precio: 500
-entrega: 
+entrega: Junio
 foto1: "/images/articulos/frascog1.jpg"
 foto2: 
 foto3: 
