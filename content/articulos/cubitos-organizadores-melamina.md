@@ -10,4 +10,4 @@ entrega: Junio
 foto1: "/images/articulos/cubitos1.jpg"
 foto2: "/images/articulos/cubitos2.jpg"
 foto3: "/images/articulos/cubitos3.jpg"
-reservado: false
+reservado: true
