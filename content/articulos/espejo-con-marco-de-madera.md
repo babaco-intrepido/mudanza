@@ -12,4 +12,4 @@ entrega: Julio
 foto1: "/images/articulos/espejo1.jpg"
 foto2: "/images/articulos/espejo2.jpg"
 foto3: 
-reservado: false
+reservado: true
