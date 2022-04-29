@@ -9,4 +9,4 @@ entrega:
 foto1: "/images/articulos/biblio1.jpg"
 foto2: "/images/articulos/biblio2.jpg"
 foto3: 
-reservado: false
+reservado: true
