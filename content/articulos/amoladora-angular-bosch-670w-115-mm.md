@@ -13,4 +13,4 @@ entrega: Julio
 foto1: "/images/articulos/amoladora1.jpg"
 foto2: "/images/articulos/amoladora2.jpg"
 foto3: "/images/articulos/amoladora3.jpg"
-reservado: false
+reservado: true

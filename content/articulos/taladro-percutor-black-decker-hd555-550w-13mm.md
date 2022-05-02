@@ -14,4 +14,4 @@ entrega: Julio
 foto1: "/images/articulos/taladro1.jpg"
 foto2: "/images/articulos/taladro2.jpg"
 foto3: "/images/articulos/taladro3.jpg"
-reservado: false
+reservado: true
