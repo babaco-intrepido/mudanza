@@ -53,7 +53,7 @@ async function fetchArticulos(): Promise<Articulo[]> {
       })
   );
 
-  articulosCache = articulos.filter(estaCompleto);
+  articulosCache = articulos.filter(estaCompleto).filter((it) => !it.reservado);
   return articulosCache;
 }
 
