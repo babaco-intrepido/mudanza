@@ -1,12 +1,13 @@
 ---
 titulo: Bandeja madera
-descripcion: 
+descripcion:
 cantidad: 1
-categoria: 
+categoria:
 destino: Vender
-precio: 
-entrega: 
-foto1: 
-foto2: 
-foto3: 
+precio:
+precioAnterior:
+entrega:
+foto1:
+foto2:
+foto3:
 reservado: false

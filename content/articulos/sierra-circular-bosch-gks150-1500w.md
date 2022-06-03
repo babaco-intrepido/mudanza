@@ -10,6 +10,7 @@ cantidad: 1
 categoria: Herramientas
 destino: Vender
 precio: 15000
+precioAnterior:
 entrega: Julio
 foto1: "/images/articulos/circular1.jpg"
 foto2: "/images/articulos/circular2.jpg"

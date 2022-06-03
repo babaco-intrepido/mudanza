@@ -9,6 +9,7 @@ cantidad: 1
 categoria: Herramientas
 destino: Vender
 precio: 7000
+precioAnterior:
 entrega: Julio
 foto1: "/images/articulos/amoladora1.jpg"
 foto2: "/images/articulos/amoladora2.jpg"

@@ -7,9 +7,10 @@ descripcion: |-
 cantidad: 1
 categoria: Muebles
 destino: Vender
-precio: 1500
+precio: 1200
+precioAnterior: 1500
 entrega: Junio
 foto1: "/images/articulos/lamparasal1.jpg"
 foto2: "/images/articulos/lamparasal2.jpg"
-foto3: 
+foto3:
 reservado: false

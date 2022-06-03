@@ -4,9 +4,10 @@ descripcion: "**Diámetro** 30cm, alto 15cm. \n\nProducto de [La materia encendi
 cantidad: 1
 categoria: Cocina
 destino: Vender
-precio: 5000
-entrega: 
+precio: 4000
+precioAnterior: 5000
+entrega:
 foto1: "/images/articulos/ensaladera1.jpg"
 foto2: "/images/articulos/ensaladera2.jpg"
-foto3: 
+foto3:
 reservado: false

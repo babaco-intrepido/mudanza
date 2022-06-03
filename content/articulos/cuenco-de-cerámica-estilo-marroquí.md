@@ -5,8 +5,9 @@ cantidad: 1
 categoria: Cocina
 destino: Vender
 precio: 600
-entrega: 
+precioAnterior:
+entrega:
 foto1: "/images/articulos/india1.jpg"
 foto2: "/images/articulos/india2.jpg"
-foto3: 
-reservado: false
+foto3:
+reservado: true

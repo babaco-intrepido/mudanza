@@ -5,8 +5,9 @@ cantidad: 1
 categoria: Muebles
 destino: Vender
 precio: 8000
+precioAnterior:
 entrega: Junio
 foto1: "/images/articulos/mesa1.jpg"
 foto2: "/images/articulos/mesa2.jpg"
-foto3: 
+foto3:
 reservado: true

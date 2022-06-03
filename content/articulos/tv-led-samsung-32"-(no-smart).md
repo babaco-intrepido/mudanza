@@ -6,8 +6,9 @@ cantidad: 1
 categoria: Electrodomésticos
 destino: Vender
 precio: 12000
-entrega: 
+precioAnterior:
+entrega:
 foto1: "/images/articulos/tele1.jpg"
 foto2: "/images/articulos/tele2.jpg"
-foto3: 
+foto3:
 reservado: true

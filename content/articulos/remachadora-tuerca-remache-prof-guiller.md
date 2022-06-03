@@ -11,7 +11,8 @@ descripcion: |-
 cantidad: 1
 categoria: Herramientas
 destino: Vender
-precio: 10000
+precio: 8000
+precioAnterior: 10000
 entrega: Julio
 foto1: "/images/articulos/remachadora1.jpg"
 foto2: "/images/articulos/remachadora2.jpg"

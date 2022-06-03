@@ -6,6 +6,7 @@ cantidad: 16
 categoria: Muebles
 destino: Vender
 precio: 200
+precioAnterior:
 entrega: Junio
 foto1: "/images/articulos/cubitos1.jpg"
 foto2: "/images/articulos/cubitos2.jpg"

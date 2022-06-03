@@ -8,8 +8,9 @@ cantidad: 1
 categoria: Muebles
 destino: Regalar
 precio: 0
+precioAnterior: 0
 entrega: Julio
 foto1: "/images/articulos/sommier1.jpg"
 foto2: "/images/articulos/sommier2.jpg"
-foto3: 
+foto3:
 reservado: true

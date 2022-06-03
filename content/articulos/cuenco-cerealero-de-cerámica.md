@@ -4,9 +4,10 @@ descripcion: "**Diámetro**: 13cm."
 cantidad: 3
 categoria: Cocina
 destino: Vender
-precio: 500
-entrega: 
+precio: 300
+precioAnterior: 500
+entrega:
 foto1: "/images/articulos/cerealero1.jpg"
 foto2: "/images/articulos/cerealero2.jpg"
-foto3: 
+foto3:
 reservado: false

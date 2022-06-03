@@ -8,8 +8,9 @@ cantidad: 1
 categoria: Muebles
 destino: Vender
 precio: 2000
-entrega: 
+precioAnterior:
+entrega:
 foto1: "/images/articulos/plegable1.jpg"
 foto2: "/images/articulos/plegable2.jpg"
-foto3: 
+foto3:
 reservado: true

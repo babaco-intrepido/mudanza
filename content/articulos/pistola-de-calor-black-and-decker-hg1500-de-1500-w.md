@@ -9,6 +9,7 @@ cantidad: 1
 categoria: Herramientas
 destino: Vender
 precio: 4000
+precioAnterior:
 entrega: Julio
 foto1: "/images/articulos/calor1.jpg"
 foto2: "/images/articulos/calor2.jpg"

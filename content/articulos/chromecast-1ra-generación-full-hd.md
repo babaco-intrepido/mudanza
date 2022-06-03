@@ -6,8 +6,9 @@ cantidad: 1
 categoria: Electrodomésticos
 destino: Vender
 precio: 2000
+precioAnterior:
 entrega: Junio
 foto1: "/images/articulos/chromecast1.jpg"
 foto2: "/images/articulos/chromecast2.jpg"
-foto3: 
+foto3:
 reservado: true

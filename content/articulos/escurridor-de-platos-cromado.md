@@ -6,6 +6,7 @@ cantidad: 1
 categoria: Cocina
 destino: Vender
 precio: 2000
+precioAnterior:
 entrega: Julio
 foto1: "/images/articulos/escurridor1.jpg"
 foto2: "/images/articulos/escurridor2.jpg"

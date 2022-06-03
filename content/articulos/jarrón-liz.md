@@ -1,12 +1,13 @@
 ---
 titulo: Jarrón Liz
-descripcion: 
+descripcion:
 cantidad: 1
-categoria: 
+categoria:
 destino: Regalar
 precio: 0
-entrega: 
-foto1: 
-foto2: 
-foto3: 
+precioAnterior: 0
+entrega:
+foto1:
+foto2:
+foto3:
 reservado: false

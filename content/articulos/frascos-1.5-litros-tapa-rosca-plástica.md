@@ -6,9 +6,10 @@ descripcion: "**Diámetro** 45cm, alto 14cm, capacidad total 1.5 litros. \n\nCon
 cantidad: 17
 categoria: Cocina
 destino: Vender
-precio: 300
+precio: 250
+precioAnterior: 300
 entrega: Junio
 foto1: "/images/articulos/frascoc1.jpg"
-foto2: 
-foto3: 
+foto2:
+foto3:
 reservado: false

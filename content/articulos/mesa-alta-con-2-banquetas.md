@@ -8,8 +8,9 @@ cantidad: 1
 categoria: Muebles
 destino: Vender
 precio: 6000
-entrega: 
+precioAnterior:
+entrega:
 foto1: "/images/articulos/mesada1.jpg"
-foto2: 
-foto3: 
+foto2:
+foto3:
 reservado: true

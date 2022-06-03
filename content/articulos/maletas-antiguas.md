@@ -1,12 +1,13 @@
 ---
 titulo: Maletas antiguas
-descripcion: 
+descripcion:
 cantidad: 4
-categoria: 
+categoria:
 destino: Regalar
 precio: 0
-entrega: 
-foto1: 
-foto2: 
-foto3: 
+precioAnterior: 0
+entrega:
+foto1:
+foto2:
+foto3:
 reservado: false

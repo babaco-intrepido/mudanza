@@ -7,9 +7,10 @@ descripcion: |-
 cantidad: 1
 categoria: Calzado
 destino: Vender
-precio: 2000
-entrega: 
+precio: 1500
+precioAnterior: 2000
+entrega:
 foto1: "/images/articulos/borcegocuadrada1.jpg"
-foto2: 
-foto3: 
+foto2:
+foto3:
 reservado: false

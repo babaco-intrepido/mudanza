@@ -5,11 +5,12 @@ descripcion: |-
 
   Tiene algo de sarro en su interior, aunque eso no afecta su funcionamiento (ver foto).
 cantidad: 1
-categoria: 
+categoria:
 destino: Vender
 precio: 4000
-entrega: 
-foto1: 
-foto2: 
-foto3: 
+precioAnterior:
+entrega:
+foto1:
+foto2:
+foto3:
 reservado: false

@@ -8,8 +8,9 @@ cantidad: 1
 categoria: Muebles
 destino: Regalar
 precio: 0
-entrega: 
+precioAnterior: 0
+entrega:
 foto1: "/images/articulos/especieroandre1.jpg"
-foto2: 
-foto3: 
+foto2:
+foto3:
 reservado: true

@@ -5,8 +5,9 @@ cantidad: 1
 categoria: Muebles
 destino: Vender
 precio: 2500
-entrega: 
+precioAnterior:
+entrega:
 foto1: "/images/articulos/ratona1.jpg"
-foto2: 
-foto3: 
+foto2:
+foto3:
 reservado: true
