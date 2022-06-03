@@ -1,14 +1,14 @@
-import fs from 'fs';
-import matter from 'gray-matter';
-import path from 'path';
-import { remark } from 'remark';
-import html from 'remark-html';
+import fs from "fs";
+import matter from "gray-matter";
+import path from "path";
+import { remark } from "remark";
+import html from "remark-html";
 // @ts-ignore
-import plainText from 'remark-mdx-to-plain-text';
+import plainText from "remark-mdx-to-plain-text";
 
-import { find, whereEq, map, prop, compose, uniq, isNil, filter } from 'ramda';
+import { find, whereEq, map, prop, compose, uniq, isNil, filter } from "ramda";
 
-const articulosDirectory = path.join(process.cwd(), 'content/articulos');
+const articulosDirectory = path.join(process.cwd(), "content/articulos");
 
 async function remarkProcessWith(plugin: any, content: string) {
   const result = await remark().use(plugin).process(content);
@@ -16,7 +16,7 @@ async function remarkProcessWith(plugin: any, content: string) {
 }
 
 async function hydrate(articulo: Articulo, fileName: string) {
-  articulo.id = fileName.replace(/\.md$/, '');
+  articulo.id = fileName.replace(/\.md$/, "");
   articulo.descripcionPlain = await remarkProcessWith(
     plainText,
     articulo.descripcion
@@ -40,11 +40,11 @@ async function fetchArticulos(): Promise<Articulo[]> {
   const fileNames = fs.readdirSync(articulosDirectory);
   const articulos = await Promise.all(
     fileNames
-      .filter((it) => it.endsWith('.md'))
+      .filter((it) => it.endsWith(".md"))
       .map(async (fileName) => {
         // Read markdown file as string
         const fullPath = path.join(articulosDirectory, fileName);
-        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const fileContents = fs.readFileSync(fullPath, "utf8");
 
         // Use gray-matter to parse the post metadata section
         const matterResult = matter(fileContents);
@@ -57,7 +57,7 @@ async function fetchArticulos(): Promise<Articulo[]> {
   return articulosCache;
 }
 
-type Destino = 'Vender' | 'Regalar';
+type Destino = "Vender" | "Regalar";
 export interface Articulo {
   id: string;
   titulo: string;
@@ -67,6 +67,7 @@ export interface Articulo {
   destino: Destino;
   categoria: string;
   precio: number;
+  precioAnterior?: number;
   entrega?: string;
   reservado: boolean;
   foto1: string;
@@ -79,7 +80,7 @@ export async function todos(destino: Destino): Promise<Articulo[]> {
 }
 
 export async function ids(): Promise<string[]> {
-  return fetchArticulos().then(map(prop('id')));
+  return fetchArticulos().then(map(prop("id")));
 }
 
 export async function getById(id: string): Promise<Articulo> {

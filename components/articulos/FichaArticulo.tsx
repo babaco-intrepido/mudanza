@@ -1,26 +1,47 @@
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Link from '../Link';
-import Typography from '@mui/material/Typography';
-import { Articulo } from '../../lib/articulos';
-import ImageOrPlaceholder from '../ImageOrPlaceholder';
-import Precio from '../Precio';
-import { Grid } from '@mui/material';
-import Entrega from './Entrega';
-import { RectangularChip } from '../common/MuiOverrides';
-import { Case, Switch } from 'react-if';
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Link from "../Link";
+import Typography from "@mui/material/Typography";
+import { Articulo } from "../../lib/articulos";
+import ImageOrPlaceholder from "../ImageOrPlaceholder";
+import Precio from "../Precio";
+import { Grid } from "@mui/material";
+import Entrega from "./Entrega";
+import { RectangularChip } from "../common/MuiOverrides";
+import { Case, Switch } from "react-if";
+import { useMemo } from "react";
+import { isNil } from "ramda";
 
 export interface FichaArticuloProps {
   articulo: Articulo;
   mostrarPrecio: boolean;
 }
 
+const calcularPorcentajeDescuento = (original: number, nuevo: number) =>
+  Math.round((1 - nuevo / original) * 100);
+
 export default function FichaArticulo({
   articulo,
   mostrarPrecio,
 }: FichaArticuloProps) {
+  const porcentajeDescuento = useMemo(
+    () =>
+      isNil(articulo.precioAnterior)
+        ? 0
+        : calcularPorcentajeDescuento(
+            articulo.precioAnterior!,
+            articulo.precio
+          ),
+    [articulo]
+  );
+
+  const hayDescuento = useMemo(
+    () => porcentajeDescuento > 0,
+    [porcentajeDescuento]
+  );
+
   const Contenido = (
-    <Card sx={{ display: 'flex' }}>
+    <Card sx={{ display: "flex" }}>
       <Grid item xs={4}>
         <ImageOrPlaceholder
           src={articulo.foto1}
@@ -44,9 +65,30 @@ export default function FichaArticulo({
               />
             </Case>
             <Case condition={mostrarPrecio}>
-              <Typography gutterBottom variant="h6">
-                <Precio importe={articulo.precio} />
-              </Typography>
+              {hayDescuento && (
+                <Typography
+                  gutterBottom
+                  variant="caption"
+                  sx={{ textDecoration: "line-through" }}
+                >
+                  <Precio importe={articulo.precioAnterior!} />
+                </Typography>
+              )}
+              <Grid container flexDirection="row">
+                <Typography gutterBottom variant="h6">
+                  <Precio importe={articulo.precio} />
+                </Typography>
+                {hayDescuento && (
+                  <Typography
+                    variant="body2"
+                    color="success.main"
+                    component="span"
+                    ml={1}
+                  >
+                    {porcentajeDescuento}% OFF
+                  </Typography>
+                )}
+              </Grid>
             </Case>
           </Switch>
 
