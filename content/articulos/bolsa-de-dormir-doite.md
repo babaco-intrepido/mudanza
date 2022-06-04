@@ -11,4 +11,4 @@ entrega:
 foto1: "/images/articulos/doite1.jpg"
 foto2: "/images/articulos/doite2.jpg"
 foto3: "/images/articulos/doite3.jpg"
-reservado: false
+reservado: true
