@@ -1,5 +1,4 @@
 ---
-
 titulo: Bombacha de gaucho talle 38
 descripcion: Talle 38, se usó una sola vez.
 cantidad: 1

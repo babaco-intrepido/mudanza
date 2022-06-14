@@ -11,4 +11,4 @@ entrega:
 foto1: "/images/articulos/montagne1.jpg"
 foto2: "/images/articulos/montagne2.jpg"
 foto3: "/images/articulos/montagne3.jpg"
-reservado: false
+reservado: true

@@ -26,4 +26,4 @@ entrega:
 foto1: "/images/articulos/waterdog1.jpg"
 foto2: "/images/articulos/waterdog2.jpg"
 foto3: "/images/articulos/waterdog3.jpg"
-reservado: false
+reservado: true

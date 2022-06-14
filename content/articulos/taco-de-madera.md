@@ -6,7 +6,7 @@ descripcion: |-
   - Medidas: Largo 22cm / Ancho 14 cm / Alto 7cm
 
   Producto de [elementos conscientes](https://elementosconscientes.com.ar/).
-cantidad: 8
+cantidad: 6
 categoria: Yoga
 destino: Vender
 precio: 500

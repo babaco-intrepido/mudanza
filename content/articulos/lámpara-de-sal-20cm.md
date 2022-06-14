@@ -1,5 +1,4 @@
 ---
-
 titulo: Lámpara de sal 20cm
 descripcion: |-
   **Medidas:** 20 cm de alto x 12cm de diámetro (base).

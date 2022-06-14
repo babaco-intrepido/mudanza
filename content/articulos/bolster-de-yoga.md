@@ -6,7 +6,7 @@ descripcion: |-
   - Relleno 100% algodón
 
   Producto de [elementos conscientes](https://elementosconscientes.com.ar/).
-cantidad: 4
+cantidad: 2
 categoria: Yoga
 destino: Vender
 precio: 2000

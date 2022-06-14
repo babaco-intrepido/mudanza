@@ -5,10 +5,10 @@ descripcion: "Memoria interna 32GB, RAM 1GB, Android 7 (LIneage OS). \n\nIncluye
 cantidad: 1
 categoria: Electrodomésticos
 destino: Vender
-precio: 10000
-precioAnterior:
+precio: 8000
+precioAnterior: 10000
 entrega:
 foto1: "/images/articulos/tablet1.jpg"
 foto2: "/images/articulos/tablet2.jpg"
 foto3: "/images/articulos/tablet3.jpg"
-reservado: true
+reservado: false

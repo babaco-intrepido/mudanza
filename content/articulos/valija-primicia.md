@@ -6,8 +6,8 @@ descripcion: |-
 cantidad: 1
 categoria: Viajes
 destino: Vender
-precio: 15000
-precioAnterior:
+precio: 10000
+precioAnterior: 15000
 entrega:
 foto1: "/images/articulos/valija1.jpg"
 foto2: "/images/articulos/valija2.jpg"
