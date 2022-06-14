@@ -10,4 +10,4 @@ entrega:
 foto1: "/images/articulos/frazada1.jpg"
 foto2: "/images/articulos/frazada2.jpg"
 foto3:
-reservado: false
+reservado: true
