@@ -15,4 +15,4 @@ entrega:
 foto1: "/images/articulos/bolster1.jpg"
 foto2: "/images/articulos/bolster2.jpg"
 foto3:
-reservado: false
+reservado: true
