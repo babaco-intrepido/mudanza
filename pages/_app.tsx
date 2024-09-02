@@ -1,7 +1,12 @@
 import * as React from 'react';
 import type { AppProps } from 'next/app';
 import { CacheProvider, EmotionCache } from '@emotion/react';
-import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
+import {
+  ThemeProvider,
+  CssBaseline,
+  createTheme,
+  responsiveFontSizes,
+} from '@mui/material';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 
@@ -20,7 +25,8 @@ interface MyAppProps extends AppProps {
 
 const clientSideEmotionCache = createEmotionCache();
 
-const lightTheme = createTheme(lightThemeOptions);
+let lightTheme = createTheme(lightThemeOptions);
+lightTheme = responsiveFontSizes(lightTheme);
 
 const MyApp: React.FunctionComponent<MyAppProps> = (props) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
