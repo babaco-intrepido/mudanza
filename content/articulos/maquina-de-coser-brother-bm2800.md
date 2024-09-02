@@ -7,7 +7,7 @@ destino: Vender
 precio: 350000
 precioAnterior: 
 entrega: 
-foto1: 
-foto2: 
-foto3: 
+foto1: "/images/articulos/brother1.jpg"
+foto2: "/images/articulos/brother2.jpg"
+foto3: "/images/articulos/brother3.jpg"
 reservado: false

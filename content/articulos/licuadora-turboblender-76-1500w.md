@@ -8,7 +8,7 @@ destino: Vender
 precio: 140000
 precioAnterior: 
 entrega: 
-foto1: 
-foto2: 
-foto3: 
+foto1: "/images/articulos/licuadora1.jpg"
+foto2: "/images/articulos/licuadora2.jpg"
+foto3: "/images/articulos/licuadora3.jpg"
 reservado: false

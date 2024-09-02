@@ -7,7 +7,7 @@ destino: Vender
 precio: 5000
 precioAnterior: 
 entrega: 
-foto1: 
-foto2: 
+foto1: "/images/articulos/cafetera1.jpg"
+foto2: "/images/articulos/cafetera2.jpg"
 foto3: 
 reservado: false
