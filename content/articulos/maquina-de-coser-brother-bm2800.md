@@ -1,10 +1,10 @@
 ---
 titulo: Maquina de coser Brother BM2800
-descripcion: 
+descripcion: 'Muy poco uso. Comprada en Paraguay en 2022. '
 cantidad: 1
-categoria: 
+categoria: Otros
 destino: Vender
-precio: 
+precio: 350000
 precioAnterior: 
 entrega: 
 foto1: 

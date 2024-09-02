@@ -1,10 +1,10 @@
 ---
 titulo: Cafetera italiana 6 pocillos
-descripcion: 
+descripcion: Funciona perfecto.
 cantidad: 1
 categoria: Cocina
 destino: Vender
-precio: 
+precio: 5000
 precioAnterior: 
 entrega: 
 foto1: 

@@ -1,13 +1,13 @@
 ---
 titulo: Termo Stanley 940ml
-descripcion: 
+descripcion: 'Muy poco uso. Comprado en Chile en Mayo 2024. '
 cantidad: 1
-categoria: 
+categoria: Camping
 destino: Vender
-precio: 
+precio: 70000
 precioAnterior: 
 entrega: 
-foto1: 
-foto2: 
+foto1: "/images/articulos/stanley1.jpg"
+foto2: "/images/articulos/stanley2.jpg"
 foto3: 
 reservado: false
