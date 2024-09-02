@@ -1,8 +1,8 @@
 ---
-titulo: Charango Andre
+titulo: Multimixer Ursus Trotter 800w
 descripcion: 
 cantidad: 1
-categoria: 
+categoria: Cocina
 destino: Vender
 precio: 
 precioAnterior: 

@@ -1,5 +1,5 @@
 ---
-titulo: Charango Andre
+titulo: Plancha
 descripcion: 
 cantidad: 1
 categoria: 

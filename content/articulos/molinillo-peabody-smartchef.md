@@ -1,8 +1,8 @@
 ---
-titulo: Charango Andre
+titulo: Molinillo Peabody Smartchef
 descripcion: 
 cantidad: 1
-categoria: 
+categoria: Cocina
 destino: Vender
 precio: 
 precioAnterior: 

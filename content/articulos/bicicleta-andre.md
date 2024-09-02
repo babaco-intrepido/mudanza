@@ -1,5 +1,5 @@
 ---
-titulo: Charango Andre
+titulo: Bicicleta Andre
 descripcion: 
 cantidad: 1
 categoria: 

@@ -1,5 +1,5 @@
 ---
-titulo: Charango Andre
+titulo: Pesas
 descripcion: 
 cantidad: 1
 categoria: 

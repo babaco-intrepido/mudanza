@@ -6,7 +6,7 @@ require 'yaml'
 CONTENT_DIR = 'content/articulos'
 PUBLIC_DIR = 'public'
 IMAGES_DIR = 'images/articulos'
-archivo = "#{CONTENT_DIR}/Inventario Babaco - Hoja 1.csv"
+archivo = "#{CONTENT_DIR}/Inventario Babaco 2024 - Hoja 1.csv"
 
 def snake_case(string)
   string.downcase.gsub(' ', '-')

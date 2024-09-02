@@ -1,5 +1,5 @@
 ---
-titulo: Charango Andre
+titulo: Pelota pilates/yoga
 descripcion: 
 cantidad: 1
 categoria: 

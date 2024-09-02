@@ -1,5 +1,5 @@
 ---
-titulo: Charango Andre
+titulo: Telar
 descripcion: 
 cantidad: 1
 categoria: 

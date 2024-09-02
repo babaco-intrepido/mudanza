@@ -1,5 +1,5 @@
 ---
-titulo: Charango Andre
+titulo: Osmo Action 4 + accesorios
 descripcion: 
 cantidad: 1
 categoria: 

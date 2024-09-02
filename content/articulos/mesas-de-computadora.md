@@ -1,5 +1,5 @@
 ---
-titulo: Charango Andre
+titulo: Mesas de computadora
 descripcion: 
 cantidad: 1
 categoria: 

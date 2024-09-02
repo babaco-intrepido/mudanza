@@ -1,8 +1,8 @@
 ---
-titulo: Charango Andre
+titulo: Licuadora Turboblender 76 1500w
 descripcion: 
 cantidad: 1
-categoria: 
+categoria: Cocina
 destino: Vender
 precio: 
 precioAnterior: 

@@ -1,8 +1,8 @@
 ---
-titulo: Charango Andre
+titulo: Cafetera italiana 6 pocillos
 descripcion: 
 cantidad: 1
-categoria: 
+categoria: Cocina
 destino: Vender
 precio: 
 precioAnterior: 

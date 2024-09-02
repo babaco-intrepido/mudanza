@@ -1,5 +1,5 @@
 ---
-titulo: Charango Andre
+titulo: Maquina de coser Brother BM2800
 descripcion: 
 cantidad: 1
 categoria: 
