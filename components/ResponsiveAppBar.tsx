@@ -51,7 +51,10 @@ const ResponsiveAppBar = ({ pages }: ResponsiveAppBarProps) => {
           <Typography
             variant="h6"
             noWrap
-            component="div"
+            component={Link}
+            href="/"
+            underline="none"
+            color="inherit"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },

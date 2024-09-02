@@ -25,7 +25,7 @@ const LaMovi = () => {
         comodidad de tener tu propio espacio itinerante.
       </Typography>
       <Stack direction="row" justifyContent="center" pt={1}>
-        <Button component={Link} variant="contained" href="/venta">
+        <Button component={Link} variant="contained" href="/movi">
           ¡Quiero saber más!
         </Button>
       </Stack>
