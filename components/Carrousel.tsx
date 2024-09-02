@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
+import Box, { BoxProps } from '@mui/material/Box';
 import MobileStepper from '@mui/material/MobileStepper';
 import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
@@ -15,9 +15,17 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 type Image = string;
 export interface CarrouselProps {
   images: Image[];
+  maxWidth?: BoxProps['maxWidth'];
+  width?: number;
+  height?: number;
 }
 
-function Carrousel({ images }: CarrouselProps) {
+function Carrousel({
+  images,
+  maxWidth = 400,
+  width = 500,
+  height = 500,
+}: CarrouselProps) {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = images.length;
@@ -35,7 +43,7 @@ function Carrousel({ images }: CarrouselProps) {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
+    <Box sx={{ maxWidth, flexGrow: 1 }}>
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -46,8 +54,8 @@ function Carrousel({ images }: CarrouselProps) {
           <div key={index}>
             {Math.abs(activeStep - index) <= 2 ? (
               <ImageOrPlaceholder
-                width={500}
-                height={500}
+                width={width}
+                height={height}
                 src={step}
                 alt={`Foto ${index}`}
               />
