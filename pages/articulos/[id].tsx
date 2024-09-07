@@ -19,7 +19,7 @@ interface DetalleArticuloProps {
 
 const nonNil = reject(isNil);
 
-function makeWhatsAppLink(mensaje: string) {
+export function makeWhatsAppLink(mensaje: string) {
   return `https://wa.me/541131768003?text=${encodeURIComponent(mensaje)}`;
 }
 
@@ -33,9 +33,9 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
   const linkWhatsApp = React.useMemo(
     () =>
       makeWhatsAppLink(
-        `¡Hola! 👋\nEstoy viendo el sitio de la mudanza y me gustaría comprar *${articulo.titulo}*.\n${siteUrl}/articulos/${articulo.id}`
+        `¡Hola! 👋\nEstoy viendo el sitio de la mudanza y me gustaría comprar *${articulo.titulo}*.\n${siteUrl}/articulos/${articulo.id}`,
       ),
-    [articulo, siteUrl]
+    [articulo, siteUrl],
   );
 
   const hayMasDeUno = React.useMemo(() => articulo.cantidad > 1, [articulo]);
@@ -71,7 +71,7 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
     <Carrousel
       images={concat(
         [articulo.foto1],
-        nonNil([articulo.foto2, articulo.foto3])
+        nonNil([articulo.foto2, articulo.foto3]),
       )}
     />
   );

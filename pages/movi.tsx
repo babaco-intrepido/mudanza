@@ -8,6 +8,7 @@ import Link from '../components/Link';
 import Carrousel from '../components/Carrousel';
 import lana from '../content/movi/aislamiento/lana.jpg';
 import doblealu from '../content/movi/aislamiento/doblealu.jpg';
+import WhatsAppFab from '../components/WhatsAppFab';
 
 const aislamiento = [lana, doblealu];
 
@@ -47,7 +48,7 @@ const Movi: NextPage<{}> = () => {
       <Head>
         <title>La Movi | ¡Nos mudamos!</title>
       </Head>
-      <Stack spacing={3}>
+      <Stack spacing={3} mb={3}>
         <Typography variant="h2" align="center">
           La Movi
           <Typography variant="h6" fontWeight="bold" color="success.main">
@@ -145,6 +146,7 @@ const Movi: NextPage<{}> = () => {
             separación de orina.
           </Typography>
         </Seccion>
+        <WhatsAppFab />
       </Stack>
     </>
   );
