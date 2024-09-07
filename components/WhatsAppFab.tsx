@@ -7,7 +7,7 @@ import { makeWhatsAppLink } from '../pages/articulos/[id]';
 const WhatsAppFab = () => {
   const handleClick = () => {
     window.open(
-      makeWhatsAppLink('¡Hola! 👋\n Me interesa saber más sobre la Movi.'),
+      makeWhatsAppLink('¡Hola! 👋\nMe interesa saber más sobre la Movi.'),
       '_blank',
     );
   };
