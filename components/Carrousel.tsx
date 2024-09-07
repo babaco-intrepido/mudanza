@@ -67,6 +67,7 @@ function Carrousel({
         steps={maxSteps}
         position="static"
         activeStep={activeStep}
+        sx={{ p: 0 }}
         nextButton={
           <Button
             size="small"

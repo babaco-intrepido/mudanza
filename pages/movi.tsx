@@ -5,6 +5,11 @@ import { Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Link from '../components/Link';
+import Carrousel from '../components/Carrousel';
+import lana from '../content/movi/aislamiento/lana.jpg';
+import doblealu from '../content/movi/aislamiento/doblealu.jpg';
+
+const aislamiento = [lana, doblealu];
 
 const Seccion = ({
   titulo,
@@ -71,6 +76,14 @@ const Movi: NextPage<{}> = () => {
           </Typography>
         </Seccion>
         <Seccion titulo="❄️ Aislamiento y revestimiento">
+          <Stack alignItems="center">
+            <Carrousel
+              images={aislamiento.map((i) => i.src)}
+              maxWidth="70%"
+              width={1600}
+              height={900}
+            />
+          </Stack>
           <Typography>
             Como vivimos en La Movi por dos años, está preparada tanto para el
             frío como para el calor.
