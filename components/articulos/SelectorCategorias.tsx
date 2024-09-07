@@ -4,6 +4,8 @@ import Chip from '@mui/material/Chip';
 import Paper from '@mui/material/Paper';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import { Link } from '@mui/material';
+import { Unless } from 'react-if';
 
 export interface ChipData {
   label: string;
@@ -13,6 +15,7 @@ export interface ChipData {
 interface SelectorCategoriasProps {
   categorias: ChipData[];
   onSelect(item: string): void;
+  onClear(): void;
 }
 
 const ListItem = styled('li')(({ theme }) => ({
@@ -22,13 +25,16 @@ const ListItem = styled('li')(({ theme }) => ({
 export default function SelectorCategorias({
   categorias,
   onSelect,
+  onClear,
 }: SelectorCategoriasProps) {
+  const allEnabled = categorias.every((it) => it.enabled);
   return (
     <Paper
       elevation={0}
       sx={{
         display: 'flex',
         justifyContent: 'center',
+        alignItems: 'center',
         flexWrap: 'wrap',
         listStyle: 'none',
         p: 0.5,
@@ -48,6 +54,16 @@ export default function SelectorCategorias({
           </ListItem>
         );
       })}
+      <Unless condition={allEnabled}>
+        <Link
+          variant="body2"
+          sx={{ cursor: 'pointer' }}
+          ml={1}
+          onClick={onClear}
+        >
+          Quitar filtros
+        </Link>
+      </Unless>
     </Paper>
   );
 }

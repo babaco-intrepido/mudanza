@@ -44,11 +44,11 @@ export default function ListadoArticulos({
   );
 
   const seleccionarCategoria = React.useCallback(
-    (seleccionada: string, actualizarQuery = true) => {
+    (seleccionada: string | undefined, actualizarQuery = true) => {
       setCategoriaSeleccionada(seleccionada);
       setCategoriasVisibles((actual) => {
         const [seleccionadas, resto] = partition(
-          (it) => it.label === seleccionada,
+          (it) => isNil(seleccionada) || it.label === seleccionada,
           actual,
         );
         seleccionadas.forEach((it) => {
@@ -60,7 +60,13 @@ export default function ListadoArticulos({
         return actual;
       });
 
-      if (actualizarQuery) {
+      if (!actualizarQuery) {
+        return;
+      }
+
+      if (isNil(seleccionada)) {
+        router.replace({ query: {} });
+      } else {
         router.replace({ query: { categoria: seleccionada } });
       }
     },
@@ -89,6 +95,7 @@ export default function ListadoArticulos({
         <SelectorCategorias
           categorias={categoriasVisibles}
           onSelect={seleccionarCategoria}
+          onClear={() => seleccionarCategoria(undefined)}
         />
       </Grid>
       <Grid container spacing={{ xs: 2, md: 3 }}>
