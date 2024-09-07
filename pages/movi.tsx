@@ -93,6 +93,28 @@ const Movi: NextPage<{}> = () => {
             </ul>
           </Typography>
         </Seccion>
+        <Seccion titulo="🔌 Electrodomésticos">
+          <Typography>
+            <ul>
+              <li>Heladera 12-24v/220v Avin Ice 50 litros</li>
+              <li>Cocina con horno y 2 hornallas Conometal</li>
+              <li>Calefón 6L Bram Metal</li>
+              <li>Calefacción estacionaria diesel</li>
+              <li>Detector de Gas Envasado y Monóxido IntelligentGas</li>
+            </ul>
+          </Typography>
+        </Seccion>
+        <Seccion titulo="💧 Agua y gas">
+          <Typography>
+            Instalación de agua fría y caliente en termofusió. Garrafa de 10kg
+            con mangueras, que alimenta al calefón y la cocina. Canilla
+            mezcladora FV en cocina + filtro de agua PSA empotrado.
+          </Typography>
+          <Typography>
+            Cuenta con un baño con ducha gatillo + mezcladora FV. Baño seco con
+            separación de orina.
+          </Typography>
+        </Seccion>
       </Stack>
     </>
   );
