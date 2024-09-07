@@ -1,10 +1,10 @@
 ---
-titulo: Cochecito
-descripcion: 
+titulo: 'Rodillo rolo '
+descripcion: Sin detalles.
 cantidad: 1
-categoria: 
+categoria: Ejercicio
 destino: Vender
-precio: 
+precio: 10000
 precioAnterior: 
 entrega: 
 foto1: 

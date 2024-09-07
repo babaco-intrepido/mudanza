@@ -1,10 +1,10 @@
 ---
-titulo: Rodillo
-descripcion: 
+titulo: Pelota pilates + yoga
+descripcion: No incluye inflador.
 cantidad: 1
-categoria: 
+categoria: Ejercicio
 destino: Vender
-precio: 
+precio: 5000
 precioAnterior: 
 entrega: 
 foto1: 

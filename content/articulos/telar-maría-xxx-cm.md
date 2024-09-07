@@ -1,5 +1,5 @@
 ---
-titulo: Pesas
+titulo: Telar María xxx cm
 descripcion: 
 cantidad: 1
 categoria: 
