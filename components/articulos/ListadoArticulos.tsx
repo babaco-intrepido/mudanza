@@ -27,7 +27,7 @@ export default function ListadoArticulos({
   const router = useRouter();
 
   const [categoriasVisibles, setCategoriasVisibles] = React.useState(
-    categoriasDisponibles.map((label) => ({ label, enabled: true }))
+    categoriasDisponibles.map((label) => ({ label, enabled: true })),
   );
 
   const [categoriaSeleccionada, setCategoriaSeleccionada] =
@@ -38,9 +38,9 @@ export default function ListadoArticulos({
       sortByReservado(
         categoriaSeleccionada
           ? articulos.filter((it) => it.categoria === categoriaSeleccionada)
-          : articulos
+          : articulos,
       ),
-    [articulos, categoriaSeleccionada]
+    [articulos, categoriaSeleccionada],
   );
 
   const seleccionarCategoria = React.useCallback(
@@ -49,7 +49,7 @@ export default function ListadoArticulos({
       setCategoriasVisibles((actual) => {
         const [seleccionadas, resto] = partition(
           (it) => it.label === seleccionada,
-          actual
+          actual,
         );
         seleccionadas.forEach((it) => {
           it.enabled = true;
@@ -64,7 +64,7 @@ export default function ListadoArticulos({
         router.replace({ query: { categoria: seleccionada } });
       }
     },
-    [router]
+    [router],
   );
 
   React.useEffect(() => {
@@ -91,7 +91,7 @@ export default function ListadoArticulos({
           onSelect={seleccionarCategoria}
         />
       </Grid>
-      <Grid container spacing={4}>
+      <Grid container spacing={{ xs: 2, md: 3 }}>
         {articulosVisibles.map((articulo, index) => (
           <Grid item key={index} xs={12} lg={6}>
             <FichaArticulo articulo={articulo} mostrarPrecio={mostrarPrecio} />

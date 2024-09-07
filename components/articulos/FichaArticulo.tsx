@@ -1,16 +1,16 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Link from "../Link";
-import Typography from "@mui/material/Typography";
-import { Articulo } from "../../lib/articulos";
-import ImageOrPlaceholder from "../ImageOrPlaceholder";
-import Precio from "../Precio";
-import { Grid } from "@mui/material";
-import Entrega from "./Entrega";
-import { RectangularChip } from "../common/MuiOverrides";
-import { Case, Switch } from "react-if";
-import { useMemo } from "react";
-import { isNil } from "ramda";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Link from '../Link';
+import Typography from '@mui/material/Typography';
+import { Articulo } from '../../lib/articulos';
+import ImageOrPlaceholder from '../ImageOrPlaceholder';
+import Precio from '../Precio';
+import { Grid } from '@mui/material';
+import Entrega from './Entrega';
+import { RectangularChip } from '../common/MuiOverrides';
+import { Case, Switch } from 'react-if';
+import { useMemo } from 'react';
+import { isNil } from 'ramda';
 
 export interface FichaArticuloProps {
   articulo: Articulo;
@@ -30,18 +30,18 @@ export default function FichaArticulo({
         ? 0
         : calcularPorcentajeDescuento(
             articulo.precioAnterior!,
-            articulo.precio
+            articulo.precio,
           ),
-    [articulo]
+    [articulo],
   );
 
   const hayDescuento = useMemo(
     () => porcentajeDescuento > 0,
-    [porcentajeDescuento]
+    [porcentajeDescuento],
   );
 
   const Contenido = (
-    <Card sx={{ display: "flex" }}>
+    <Card sx={{ display: 'flex', height: { xs: 120, md: 130 } }}>
       <Grid item xs={4}>
         <ImageOrPlaceholder
           src={articulo.foto1}
@@ -69,7 +69,7 @@ export default function FichaArticulo({
                 <Typography
                   gutterBottom
                   variant="caption"
-                  sx={{ textDecoration: "line-through" }}
+                  sx={{ textDecoration: 'line-through' }}
                 >
                   <Precio importe={articulo.precioAnterior!} />
                 </Typography>
