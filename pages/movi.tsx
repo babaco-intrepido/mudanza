@@ -14,7 +14,7 @@ const Seccion = ({
   children: React.ReactNode;
 }) => {
   return (
-    <Stack spacing={1}>
+    <Stack spacing={1} textAlign="justify">
       <Typography variant="h5">{titulo}</Typography>
       {children}
     </Stack>
@@ -67,6 +67,22 @@ const Movi: NextPage<{}> = () => {
               </Item>
               <Item titulo="Frenos">pastillas y discos nuevos.</Item>
             </ul>
+          </Typography>
+        </Seccion>
+        <Seccion titulo="❄️ Aislamiento y revestimiento">
+          <Typography>
+            Como vivimos en La Movi por dos años, está preparada tanto para el
+            frío como para el calor.
+          </Typography>
+          <Typography>
+            <strong>Paredes y techo:</strong> lana de roca (que también provee
+            aislamiento acústico) y encima de eso Isolant Doble Alu de 10mm. Por
+            fuera, pintado con varias manos de aislante térmico líquido Atacama
+            Isolant. Revestidas con machimbre.
+          </Typography>
+          <Typography>
+            <strong>Piso:</strong> Isolant Doble Alu de 10mm como aislante,
+            fenólico y piso vinílico.
           </Typography>
         </Seccion>
         <Seccion titulo="⚡ Electricidad">
