@@ -56,8 +56,9 @@ const Movi: NextPage<{}> = () => {
             conciencia, con cambios de filtros y aceite cada 5000 kilómetros.
           </Typography>
           <Typography>
-            Tenemos un registro de todas las partes que fuimos cambiando durante
-            estos 2 años, como por ejemplo:
+            Radicada en CABA con VTV al día, renovada en Agosto 2024. Tenemos un
+            registro de todas las partes que fuimos cambiando durante estos 2
+            años, como por ejemplo:
             <ul>
               <Item titulo="Embrague">colocado nuevo en 2023.</Item>
               <Item titulo="Bomba de agua">colocado nuevo en 2023.</Item>
