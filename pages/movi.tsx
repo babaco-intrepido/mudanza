@@ -60,6 +60,7 @@ const Movi: NextPage<{}> = () => {
             Mercedes Benz Sprinter 313 modelo 2010. La compramos con 500.000
             kilómetros y le hicimos unos 35.000 más. Siempre se mantuvo a
             conciencia, con cambios de filtros y aceite cada 5000 kilómetros.
+            Cuenta con alarma X28 y cierre centralizado en puertas y portones.
           </Typography>
           <Typography>
             Radicada en CABA con VTV al día, renovada en Agosto 2024. Tenemos un
