@@ -72,27 +72,26 @@ const Movi: NextPage<{}> = () => {
         <Seccion titulo="⚡ Electricidad">
           <Typography>
             Cuenta con un sistema solar con 2 baterías, que garantiza autonomía
-            total de la red eléctrica.
+            total de la red eléctrica. Luces LED cálidas en toda la camioneta,
+            seis enchufes, cuatro tomas USB y dos tomas 12v (tipo encendedor).
           </Typography>
-          <ul>
-            <li>Panel Solar 72 celdas 400Wp (Bifacial)</li>
-            <li>
-              Inversor Growatt FV Off Grid con 1 regulador MPPT 3000VA (3000W)
-            </li>
-            24V/220V
-            <li>
-              Bateria Plomo-Ácido ULTRACELL VRLA GEL sin mantenimiento 12V275AH
-            </li>
-            <li>
-              Cargador DC-DC Orion Smart 18A Victron (para cargar las baterías
-              con el alternador sin afectar a la batería de servicio)
-            </li>
-            <li>Protector Baterias Victron 12/24 220Ah</li>
-            <li>Luces LED en baño y a lo largo de la camioneta </li>
-            <li>6 enchufes (cocina, comedor y cama)</li>
-            <li>4 tomas USB (cocina y cama)</li>
-            <li>Luz de lectura en la cama </li>
-          </ul>
+          <Typography>
+            Detalles del sistema:
+            <ul>
+              <li>Panel Solar 72 celdas 400Wp (Bifacial)</li>
+              <li>
+                Inversor Growatt FV Off Grid con 1 regulador MPPT 3000VA (3000W)
+              </li>
+              <li>
+                Bateria Plomo-Ácido ULTRACELL VRLA GEL sin mantenimiento
+                12V275AH
+              </li>
+              <li>
+                Cargador DC-DC Orion Smart 18A Victron (para cargar las baterías
+                con el alternador sin afectar a la batería de servicio)
+              </li>
+            </ul>
+          </Typography>
         </Seccion>
       </Stack>
     </>
