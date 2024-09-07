@@ -100,6 +100,9 @@ const Movi: NextPage<{}> = () => {
             <strong>Piso:</strong> Isolant Doble Alu de 10mm como aislante,
             fenólico y piso vinílico.
           </Typography>
+          <Typography>
+            <strong>Ventanas:</strong> cortinas blackout, que conservan la temperatura interior y evitan que entre la luz.
+          </Typography>
         </Seccion>
         <Seccion titulo="⚡ Electricidad">
           <Typography>
