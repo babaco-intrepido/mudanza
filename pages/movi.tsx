@@ -81,7 +81,7 @@ const Movi: NextPage<{}> = () => {
           <Stack alignItems="center">
             <Carrousel
               images={aislamiento.map((i) => i.src)}
-              maxWidth="70%"
+              maxWidth={{ xs: '95%', md: '70%' }}
               width={1600}
               height={900}
             />
