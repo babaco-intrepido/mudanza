@@ -6,8 +6,8 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Link from '../components/Link';
 import Carrousel from '../components/Carrousel';
-import lana from '../content/movi/aislamiento/lana.jpg';
-import doblealu from '../content/movi/aislamiento/doblealu.jpg';
+import lana from '../public/images/movi/aislamiento/lana.jpg';
+import doblealu from '../public/images/movi/aislamiento/doblealu.jpg';
 import WhatsAppFab from '../components/WhatsAppFab';
 
 const aislamiento = [lana, doblealu];

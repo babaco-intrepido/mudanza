@@ -6,7 +6,9 @@ import { NextPage } from 'next';
 import Link from '../components/Link';
 import Head from 'next/head';
 import Image from 'next/image';
-import laMovi from '../public/images/movidesierto.jpg';
+import movi1 from '../public/images/movi/movidesierto.jpg';
+import movi2 from '../public/images/movi/movirio.jpg';
+import movi3 from '../public/images/movi/moviluz.jpg';
 import Carrousel from '../components/Carrousel';
 
 const LaMovi = () => {
@@ -76,7 +78,7 @@ const Index: NextPage = () => {
           camino y necesita vender su casa para poder seguir viajando.
         </Typography>
         <Carrousel
-          images={[laMovi.src, laMovi.src, laMovi.src]}
+          images={[movi1.src, movi2.src, movi3.src]}
           maxWidth="100%"
           width={1600}
           height={900}
