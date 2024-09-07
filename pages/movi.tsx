@@ -45,11 +45,7 @@ const Movi: NextPage<{}> = () => {
       <Stack spacing={3}>
         <Typography variant="h2" align="center">
           La Movi
-          <Typography
-            variant="subtitle1"
-            fontWeight="bold"
-            color="success.main"
-          >
+          <Typography variant="h6" fontWeight="bold" color="success.main">
             Precio de venta: u$s 25.000
           </Typography>
         </Typography>

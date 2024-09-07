@@ -17,15 +17,11 @@ const lightThemeOptions: ThemeOptions = {
     },
   },
   typography: {
-    h3: {
-      fontSize: '1.5 rem',
-    },
     h6: {
       fontWeight: 'normal',
       lineHeight: 1.25,
     },
     subtitle1: {
-      fontSize: '0.875rem',
       lineHeight: 1.25,
     },
     subtitle2: {
