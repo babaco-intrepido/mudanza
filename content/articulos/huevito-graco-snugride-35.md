@@ -5,7 +5,7 @@ descripcion: Excelente estado, base con detalles por haber estado montado en est
 cantidad: 1
 categoria: Bebé
 destino: Vender
-precio: 100000
+precio: 80000
 precioAnterior: 
 entrega: 
 foto1: 
