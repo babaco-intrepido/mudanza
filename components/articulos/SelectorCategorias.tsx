@@ -6,6 +6,7 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { Link } from '@mui/material';
 import { Unless } from 'react-if';
+import { sortBy } from 'ramda';
 
 export interface ChipData {
   label: string;
@@ -42,7 +43,7 @@ export default function SelectorCategorias({
       }}
       component="ul"
     >
-      {categorias.map((data, index) => {
+      {sortBy((it) => it.label, categorias).map((data, index) => {
         return (
           <ListItem key={index}>
             <Chip
