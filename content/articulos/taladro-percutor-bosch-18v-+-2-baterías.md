@@ -8,7 +8,7 @@ destino: Vender
 precio: 350000
 precioAnterior: 
 entrega: 
-foto1: 
-foto2: 
-foto3: 
+foto1: "/images/articulos/taladro1.jpg"
+foto2: "/images/articulos/taladro2.jpg"
+foto3: "/images/articulos/taladro3.jpg"
 reservado: false
