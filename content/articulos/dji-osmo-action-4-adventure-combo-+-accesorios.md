@@ -1,5 +1,5 @@
 ---
-titulo: Osmo Action 4 adventure combo + accesorios
+titulo: DJI Osmo Action 4 adventure combo + accesorios
 descripcion: Incluye memoria, kit adventure combo, protectores, funda y soportes que
   se ven en las fotos.
 cantidad: 1
