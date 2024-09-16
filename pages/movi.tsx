@@ -8,9 +8,32 @@ import Link from '../components/Link';
 import Carrousel from '../components/Carrousel';
 import lana from '../public/images/movi/aislamiento/lana.jpg';
 import doblealu from '../public/images/movi/aislamiento/doblealu.jpg';
+import mesada from '../public/images/movi/mesada.jpg';
+import calefon from '../public/images/movi/calefon.jpg';
+import afuera from '../public/images/movi/afuera.jpg';
+import alacenas from '../public/images/movi/alacenas.jpg';
+import cajonescama from '../public/images/movi/cajonescama.jpg';
+import cajonescocina from '../public/images/movi/cajonescocina.jpg';
+import camaluz from '../public/images/movi/camaluz.jpg';
+import cocina from '../public/images/movi/cocina.jpg';
+import bano from '../public/images/movi/bano.jpg';
+import entera from '../public/images/movi/entera.jpg';
 import WhatsAppFab from '../components/WhatsAppFab';
+import { StaticImageData } from 'next/image';
 
 const aislamiento = [lana, doblealu];
+const todas = [
+  afuera,
+  entera,
+  alacenas,
+  cajonescocina,
+  cocina,
+  mesada,
+  calefon,
+  bano,
+  cajonescama,
+  camaluz,
+];
 
 const Seccion = ({
   titulo,
@@ -42,6 +65,19 @@ const Item = ({
   );
 };
 
+const Fotos = ({ data }: { data: StaticImageData[] }) => {
+  return (
+    <Stack alignItems="center">
+      <Carrousel
+        images={data.map((i) => i.src)}
+        maxWidth={{ xs: '95%', md: '100%' }}
+        width={1600}
+        height={900}
+      />
+    </Stack>
+  );
+};
+
 const Movi: NextPage<{}> = () => {
   return (
     <>
@@ -54,7 +90,11 @@ const Movi: NextPage<{}> = () => {
           <Typography variant="h6" fontWeight="bold" color="success.main">
             Precio de venta: u$s 25.000
           </Typography>
+          <Typography variant="h6" fontWeight="bold" color="success.main">
+            Solo efectivo - no aceptamos permutas
+          </Typography>
         </Typography>
+        <Fotos data={todas} />
         <Seccion titulo="🚐 Vehículo">
           <Typography>
             Mercedes Benz Sprinter 313 modelo 2010. La compramos con 500.000
@@ -78,14 +118,7 @@ const Movi: NextPage<{}> = () => {
           </Typography>
         </Seccion>
         <Seccion titulo="❄️ Aislamiento y revestimiento">
-          <Stack alignItems="center">
-            <Carrousel
-              images={aislamiento.map((i) => i.src)}
-              maxWidth={{ xs: '95%', md: '70%' }}
-              width={1600}
-              height={900}
-            />
-          </Stack>
+          <Fotos data={aislamiento} />
           <Typography>
             Como vivimos en La Movi por dos años, está preparada tanto para el
             frío como para el calor.
@@ -101,7 +134,8 @@ const Movi: NextPage<{}> = () => {
             fenólico y piso vinílico.
           </Typography>
           <Typography>
-            <strong>Ventanas:</strong> cortinas blackout, que conservan la temperatura interior y evitan que entre la luz.
+            <strong>Ventanas:</strong> cortinas blackout, que conservan la
+            temperatura interior y evitan que entre la luz.
           </Typography>
         </Seccion>
         <Seccion titulo="⚡ Electricidad">
@@ -141,7 +175,7 @@ const Movi: NextPage<{}> = () => {
         </Seccion>
         <Seccion titulo="💧 Agua y gas">
           <Typography>
-            Instalación de agua fría y caliente en termofusió. Garrafa de 10kg
+            Instalación de agua fría y caliente en termofusión. Garrafa de 10kg
             con mangueras, que alimenta al calefón y la cocina. Canilla
             mezcladora FV en cocina + filtro de agua PSA empotrado.
           </Typography>

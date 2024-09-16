@@ -7,8 +7,8 @@ import Link from '../components/Link';
 import Head from 'next/head';
 import Image from 'next/image';
 import movi1 from '../public/images/movi/movidesierto.jpg';
-import movi2 from '../public/images/movi/movirio.jpg';
-import movi3 from '../public/images/movi/moviluz.jpg';
+import movi2 from '../public/images/movi/afuera.jpg';
+import movi3 from '../public/images/movi/entera.jpg';
 import Carrousel from '../components/Carrousel';
 
 const LaMovi = () => {
