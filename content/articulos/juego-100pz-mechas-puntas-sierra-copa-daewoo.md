@@ -10,4 +10,5 @@ entrega:
 foto1: "/images/articulos/puntas1.jpg"
 foto2: "/images/articulos/puntas2.jpg"
 foto3: 
+foto4: 
 reservado: false

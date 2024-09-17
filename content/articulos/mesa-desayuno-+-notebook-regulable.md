@@ -11,4 +11,5 @@ entrega:
 foto1: "/images/articulos/mesita1.jpg"
 foto2: "/images/articulos/mesita2.jpg"
 foto3: "/images/articulos/mesita3.jpg"
+foto4: "/images/articulos/mesita4.jpg"
 reservado: false

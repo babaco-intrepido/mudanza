@@ -71,7 +71,7 @@ const DetalleArticulo: NextPage<DetalleArticuloProps> = ({
     <Carrousel
       images={concat(
         [articulo.foto1],
-        nonNil([articulo.foto2, articulo.foto3]),
+        nonNil([articulo.foto2, articulo.foto3, articulo.foto4]),
       )}
     />
   );

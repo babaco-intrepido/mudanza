@@ -11,4 +11,5 @@ entrega:
 foto1: "/images/articulos/licuadora1.jpg"
 foto2: "/images/articulos/licuadora2.jpg"
 foto3: "/images/articulos/licuadora3.jpg"
+foto4: "/images/articulos/licuadora4.jpg"
 reservado: false

@@ -10,4 +10,5 @@ entrega:
 foto1: "/images/articulos/torx1.jpg"
 foto2: 
 foto3: 
+foto4: 
 reservado: false

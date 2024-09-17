@@ -10,4 +10,5 @@ entrega:
 foto1: "/images/articulos/plancha1.jpg"
 foto2: "/images/articulos/plancha2.jpg"
 foto3: "/images/articulos/plancha3.jpg"
+foto4: 
 reservado: false

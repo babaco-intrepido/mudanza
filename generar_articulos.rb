@@ -37,6 +37,7 @@ def to_articulo(item)
     'foto1' => nombre_foto(item, 1),
     'foto2' => nombre_foto(item, 2),
     'foto3' => nombre_foto(item, 3),
+    'foto4' => nombre_foto(item, 4),
     'reservado' => item['Estado'] == 'Reservado'
   }
 end

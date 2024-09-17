@@ -10,4 +10,5 @@ entrega:
 foto1: "/images/articulos/destornillador1.jpg"
 foto2: "/images/articulos/destornillador2.jpg"
 foto3: 
+foto4: 
 reservado: false

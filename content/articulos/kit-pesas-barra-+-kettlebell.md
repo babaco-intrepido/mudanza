@@ -11,4 +11,5 @@ entrega:
 foto1: "/images/articulos/pesas1.jpg"
 foto2: "/images/articulos/pesas2.jpg"
 foto3: 
+foto4: 
 reservado: false

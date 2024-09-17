@@ -10,4 +10,5 @@ entrega:
 foto1: "/images/articulos/rodillo1.jpg"
 foto2: "/images/articulos/rodillo2.jpg"
 foto3: 
+foto4: 
 reservado: false
