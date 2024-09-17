@@ -12,4 +12,4 @@ foto1: "/images/articulos/molinillo1.jpg"
 foto2: "/images/articulos/molinillo2.jpg"
 foto3: "/images/articulos/molinillo3.jpg"
 foto4: 
-reservado: false
+reservado: true

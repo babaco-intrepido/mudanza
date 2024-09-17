@@ -11,4 +11,4 @@ foto1: "/images/articulos/caladora1.jpg"
 foto2: "/images/articulos/caladora2.jpg"
 foto3: "/images/articulos/caladora3.jpg"
 foto4: 
-reservado: false
+reservado: true
