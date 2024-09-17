@@ -14,4 +14,4 @@ foto1: "/images/articulos/setbosch1.jpg"
 foto2: "/images/articulos/setbosch2.jpg"
 foto3: 
 foto4: 
-reservado: false
+reservado: true
