@@ -7,7 +7,7 @@ destino: Vender
 precio: 2000000
 precioAnterior: 
 entrega: 
-foto1: 
-foto2: 
-foto3: 
+foto1: "/images/articulos/drone1.jpg"
+foto2: "/images/articulos/drone2.jpg"
+foto3: "/images/articulos/drone3.jpg"
 reservado: false

@@ -8,7 +8,7 @@ destino: Vender
 precio: 30000
 precioAnterior: 
 entrega: 
-foto1: 
-foto2: 
+foto1: "/images/articulos/pesas1.jpg"
+foto2: "/images/articulos/pesas2.jpg"
 foto3: 
 reservado: false

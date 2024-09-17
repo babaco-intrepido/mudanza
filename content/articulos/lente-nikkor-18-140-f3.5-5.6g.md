@@ -7,7 +7,7 @@ destino: Vender
 precio: 350000
 precioAnterior: 
 entrega: 
-foto1: 
-foto2: 
+foto1: "/images/articulos/nikon1.jpg"
+foto2: "/images/articulos/nikon2.jpg"
 foto3: 
 reservado: false

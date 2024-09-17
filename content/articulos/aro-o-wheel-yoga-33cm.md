@@ -7,7 +7,7 @@ destino: Vender
 precio: 10000
 precioAnterior: 
 entrega: 
-foto1: 
-foto2: 
+foto1: "/images/articulos/aro1.jpg"
+foto2: "/images/articulos/aro2.jpg"
 foto3: 
 reservado: false

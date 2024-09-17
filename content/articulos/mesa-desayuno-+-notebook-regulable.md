@@ -8,7 +8,7 @@ destino: Vender
 precio: 20000
 precioAnterior: 
 entrega: 
-foto1: 
-foto2: 
-foto3: 
+foto1: "/images/articulos/mesita1.jpg"
+foto2: "/images/articulos/mesita2.jpg"
+foto3: "/images/articulos/mesita3.jpg"
 reservado: false
