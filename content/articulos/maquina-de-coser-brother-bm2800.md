@@ -11,4 +11,4 @@ foto1: "/images/articulos/brother1.jpg"
 foto2: "/images/articulos/brother2.jpg"
 foto3: "/images/articulos/brother3.jpg"
 foto4: 
-reservado: true
+reservado: false

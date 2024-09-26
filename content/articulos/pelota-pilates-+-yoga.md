@@ -11,4 +11,4 @@ foto1: "/images/articulos/pelota1.jpg"
 foto2: "/images/articulos/pelota2.jpg"
 foto3: 
 foto4: 
-reservado: false
+reservado: true

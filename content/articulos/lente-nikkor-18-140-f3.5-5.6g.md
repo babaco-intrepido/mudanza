@@ -8,7 +8,7 @@ precio: 350000
 precioAnterior: 
 entrega: 
 foto1: "/images/articulos/lente1.jpg"
-foto2:
+foto2: 
 foto3: 
 foto4: 
 reservado: false
